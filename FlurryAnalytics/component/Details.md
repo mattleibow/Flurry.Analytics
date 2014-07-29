@@ -17,9 +17,8 @@ The setup for all the platforms is very easy with only a few steps:
 
 ### Android
 1. Add the `INTERNET` permission to `AndroidManifest.xml`.
-2. Add `Google Play Services` [NuGet](http://www.NuGet.org) or [Component](http://components.xamarin.com) to your app. Make sure you select the correct version for your application.
-3. Add `FlurryAgent.OnStartSession(this, "YOUR_API_KEY");` to the `OnStart` method of the Activity or Service.
-4. Add `FlurryAgent.OnEndSession(this);` to the `OnStop` method of the Activity or Service.
+2. Add `FlurryAgent.OnStartSession(this, "YOUR_API_KEY");` to the `OnStart` method of the Activity or Service.
+3. Add `FlurryAgent.OnEndSession(this);` to the `OnStop` method of the Activity or Service.
 
 ### iOS
 1. Add `FlurryAgent.StartSession("YOUR_API_KEY");` to the `FinishedLaunching` method of the Application Delegate
