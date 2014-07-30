@@ -9,6 +9,18 @@ Adding Flurry Analytics to your app is very simple and only requires a few steps
 2. Add `FlurryAgent.OnStartSession(this, "YOUR_API_KEY");` to the `OnStart` method of the Activity or Service.
 3. Add `FlurryAgent.OnEndSession(this);` to the `OnStop` method of the Activity or Service.
 
+*NOTE: You may get exceptions in the Application Output, this is because Google Play Services is not added to your app. Simply add the appropriate version from NuGet.org or the Component Store.*
+```
+[System.err] java.lang.VerifyError: com.flurry.sdk.dw
+[System.err] 	at com.flurry.sdk.dj$1.a(SourceFile:247)
+[System.err] 	at com.flurry.sdk.ff.run(SourceFile:49)
+[System.err] 	at android.os.Handler.handleCallback(Handler.java:587)
+[System.err] 	at android.os.Handler.dispatchMessage(Handler.java:92)
+[System.err] 	at android.os.Looper.loop(Looper.java:130)
+[System.err] 	at android.os.HandlerThread.run(HandlerThread.java:60)
+```
+
+
 ### iOS
 1. Add `FlurryAgent.StartSession("YOUR_API_KEY");` to the `FinishedLaunching` method of the Application Delegate
 

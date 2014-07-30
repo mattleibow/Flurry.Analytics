@@ -21,7 +21,7 @@ build:
 libraries: 
   ios: binding/Flurry.Analytics.iOS/bin/release/Flurry.Analytics.iOS.dll
   android: binding/Flurry.Analytics.Android/bin/release/Flurry.Analytics.Android.dll
-  winphone-8.0: binding/Flurry.Analytics.WindowsPhone/FlurryWP8SDK.dll
+  winphone-8.0: binding/Flurry.Analytics.WP8/Flurry.Analytics.WP8.dll
 
 
 samples: 
