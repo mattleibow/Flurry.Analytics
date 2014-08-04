@@ -8,5 +8,11 @@ namespace Flurry.Analytics {
 		Debug,
 		All
 	}
+
+	public enum Gender {
+		Unknown = -1,
+		Male = 1,
+		Female = 0,
+	}
 }
 

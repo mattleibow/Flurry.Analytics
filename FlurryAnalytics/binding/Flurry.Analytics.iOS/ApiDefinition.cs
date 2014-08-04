@@ -65,8 +65,9 @@ namespace Flurry.Analytics {
 		void LogEvent (string eventName, NSDictionary parameters, bool timed);
 
 		[Static, Export ("endTimedEvent:withParameters:")]
-		void EndTimedEvent (string eventName, NSDictionary parameters);
+		void EndTimedEvent (string eventName, [NullAllowed] NSDictionary parameters);
 
+		[Obsolete("Use LogAllPageViewsForTarget instead.")]
 		[Static, Export ("logAllPageViews:")]
 		void LogAllPageViews (NSObject target);
 
