@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Flurry.Analytics.iOS.Sample
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Flurry.Analytics.iOS", "..\..\binding\Flurry.Analytics.iOS\Flurry.Analytics.iOS.csproj", "{B268C687-B474-41E5-9219-893DC13F9FE4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Flurry.Analytics.iOS.FeatureSample", "..\Flurry.Analytics.iOS.FeatureSample\Flurry.Analytics.iOS.FeatureSample.csproj", "{57E6A240-6CE6-40D4-AA78-4EC9C145B081}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Ad-Hoc|Any CPU = Ad-Hoc|Any CPU
@@ -23,6 +25,30 @@ Global
 		Release|iPhoneSimulator = Release|iPhoneSimulator
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{57E6A240-6CE6-40D4-AA78-4EC9C145B081}.Ad-Hoc|Any CPU.ActiveCfg = Ad-Hoc|iPhone
+		{57E6A240-6CE6-40D4-AA78-4EC9C145B081}.Ad-Hoc|Any CPU.Build.0 = Ad-Hoc|iPhone
+		{57E6A240-6CE6-40D4-AA78-4EC9C145B081}.Ad-Hoc|iPhone.ActiveCfg = Ad-Hoc|iPhone
+		{57E6A240-6CE6-40D4-AA78-4EC9C145B081}.Ad-Hoc|iPhone.Build.0 = Ad-Hoc|iPhone
+		{57E6A240-6CE6-40D4-AA78-4EC9C145B081}.Ad-Hoc|iPhoneSimulator.ActiveCfg = Ad-Hoc|iPhone
+		{57E6A240-6CE6-40D4-AA78-4EC9C145B081}.Ad-Hoc|iPhoneSimulator.Build.0 = Ad-Hoc|iPhone
+		{57E6A240-6CE6-40D4-AA78-4EC9C145B081}.AppStore|Any CPU.ActiveCfg = AppStore|iPhone
+		{57E6A240-6CE6-40D4-AA78-4EC9C145B081}.AppStore|Any CPU.Build.0 = AppStore|iPhone
+		{57E6A240-6CE6-40D4-AA78-4EC9C145B081}.AppStore|iPhone.ActiveCfg = AppStore|iPhone
+		{57E6A240-6CE6-40D4-AA78-4EC9C145B081}.AppStore|iPhone.Build.0 = AppStore|iPhone
+		{57E6A240-6CE6-40D4-AA78-4EC9C145B081}.AppStore|iPhoneSimulator.ActiveCfg = AppStore|iPhone
+		{57E6A240-6CE6-40D4-AA78-4EC9C145B081}.AppStore|iPhoneSimulator.Build.0 = AppStore|iPhone
+		{57E6A240-6CE6-40D4-AA78-4EC9C145B081}.Debug|Any CPU.ActiveCfg = Debug|iPhoneSimulator
+		{57E6A240-6CE6-40D4-AA78-4EC9C145B081}.Debug|Any CPU.Build.0 = Debug|iPhoneSimulator
+		{57E6A240-6CE6-40D4-AA78-4EC9C145B081}.Debug|iPhone.ActiveCfg = Debug|iPhone
+		{57E6A240-6CE6-40D4-AA78-4EC9C145B081}.Debug|iPhone.Build.0 = Debug|iPhone
+		{57E6A240-6CE6-40D4-AA78-4EC9C145B081}.Debug|iPhoneSimulator.ActiveCfg = Debug|iPhoneSimulator
+		{57E6A240-6CE6-40D4-AA78-4EC9C145B081}.Debug|iPhoneSimulator.Build.0 = Debug|iPhoneSimulator
+		{57E6A240-6CE6-40D4-AA78-4EC9C145B081}.Release|Any CPU.ActiveCfg = Release|iPhone
+		{57E6A240-6CE6-40D4-AA78-4EC9C145B081}.Release|Any CPU.Build.0 = Release|iPhone
+		{57E6A240-6CE6-40D4-AA78-4EC9C145B081}.Release|iPhone.ActiveCfg = Release|iPhone
+		{57E6A240-6CE6-40D4-AA78-4EC9C145B081}.Release|iPhone.Build.0 = Release|iPhone
+		{57E6A240-6CE6-40D4-AA78-4EC9C145B081}.Release|iPhoneSimulator.ActiveCfg = Release|iPhoneSimulator
+		{57E6A240-6CE6-40D4-AA78-4EC9C145B081}.Release|iPhoneSimulator.Build.0 = Release|iPhoneSimulator
 		{99D82214-801C-4FF1-82C1-CCDBA1E6367B}.Ad-Hoc|Any CPU.ActiveCfg = Ad-Hoc|iPhone
 		{99D82214-801C-4FF1-82C1-CCDBA1E6367B}.Ad-Hoc|Any CPU.Build.0 = Ad-Hoc|iPhone
 		{99D82214-801C-4FF1-82C1-CCDBA1E6367B}.Ad-Hoc|iPhone.ActiveCfg = Ad-Hoc|iPhone
@@ -81,7 +107,7 @@ Global
 		{B268C687-B474-41E5-9219-893DC13F9FE4}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(MonoDevelopProperties) = preSolution
-		StartupItem = Flurry.Analytics.iOS.Sample.csproj
+		StartupItem = ..\Flurry.Analytics.iOS.FeatureSample\Flurry.Analytics.iOS.FeatureSample.csproj
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
