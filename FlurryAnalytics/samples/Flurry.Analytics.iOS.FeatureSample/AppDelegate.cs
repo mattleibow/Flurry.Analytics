@@ -1,9 +1,12 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.InteropServices;
 
 using MonoTouch.Foundation;
 using MonoTouch.UIKit;
+
+using Flurry.Analytics;
 
 namespace Flurry.Analytics.iOS.FeatureSample
 {
@@ -15,6 +18,7 @@ namespace Flurry.Analytics.iOS.FeatureSample
 	{
 		// class-level declarations
 		UIWindow window;
+		RootViewController rootViewController;
 
 		//
 		// This method is invoked when the application has loaded and is ready to run. In this
@@ -25,12 +29,15 @@ namespace Flurry.Analytics.iOS.FeatureSample
 		//
 		public override bool FinishedLaunching (UIApplication app, NSDictionary options)
 		{
+			FlurryAgent.SetAppVersion ("1.0.0.0");
+			FlurryAgent.StartSession ("PQSZJRK4B5BW8Q7YQQXF");
+
 			// create a new window instance based on the screen size
 			window = new UIWindow (UIScreen.MainScreen.Bounds);
-			
-			// If you have defined a root view controller, set it here:
-			// window.RootViewController = myViewController;
-			
+			rootViewController = new RootViewController ();
+
+			window.RootViewController = rootViewController;
+
 			// make the window visible
 			window.MakeKeyAndVisible ();
 			
