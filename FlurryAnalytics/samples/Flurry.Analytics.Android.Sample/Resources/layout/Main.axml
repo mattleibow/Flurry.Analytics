@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+    <TextView
+        android:text="Flurry Version:"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView2"
+        android:gravity="center" />
+    <TextView
+        android:text="..."
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/VersionLabel"
+        android:gravity="center"
+        android:layout_marginBottom="36sp" />
+    <TextView
+        android:text="Log Events:"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView4"
+        android:gravity="center" />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/EventParameterText"
+        android:gravity="center"
+        android:hint="enter event parameter" />
+    <Button
+        android:id="@+id/LogEventButton"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Log Event Now" />
+</LinearLayout>

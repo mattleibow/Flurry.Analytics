@@ -1,0 +1,42 @@
+%YAML 1.2
+---
+
+name: Flurry Analytics
+id: flurry-analytics
+version: "1.0"
+publisher: Flurry, Inc.
+publisher-url: http://www.flurry.com/solutions/analytics
+
+summary: Flurry Analytics enables you to analyze consumer behavior through data observations.
+
+license: component/License.md
+details: component/Details.md
+getting-started: component/GettingStarted.md
+
+
+build: 
+  - binding/Flurry.Analytics.iOS/Flurry.Analytics.iOS.csproj
+  - binding/Flurry.Analytics.Android/Flurry.Analytics.Android.csproj
+
+libraries: 
+  ios: binding/Flurry.Analytics.iOS/bin/release/Flurry.Analytics.iOS.dll
+  android: binding/Flurry.Analytics.Android/bin/release/Flurry.Analytics.Android.dll
+  winphone-8.0: binding/Flurry.Analytics.WP8/Flurry.Analytics.WP8.dll
+
+
+samples: 
+  - name: "iOS Sample"
+    path: samples/Flurry.Analytics.iOS.Sample/Flurry.Analytics.iOS.Sample.sln
+    configuration: "Release|iPhone"
+  - name: "Android Sample"
+    path: samples/Flurry.Analytics.Android.Sample/Flurry.Analytics.Android.Sample.sln
+  - name: "Windows Phone 8 Sample"
+    path: samples/Flurry.Analytics.WindowsPhone.Sample/Flurry.Analytics.WindowsPhone.Sample.sln
+
+
+icons: 
+  - component/icons/flurry-analytics_128x128.png
+  - component/icons/flurry-analytics_512x512.png
+screenshots:
+  - component/screenshots/logos.png
+  - component/screenshots/dash.png

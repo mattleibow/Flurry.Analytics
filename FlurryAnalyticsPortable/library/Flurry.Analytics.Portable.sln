@@ -1,0 +1,64 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30501.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Flurry.Analytics.Portable", "Flurry.Analytics.Portable\Flurry.Analytics.Portable.csproj", "{4FFED8D8-634A-4569-B8DC-8771EC93790E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Flurry.Analytics.Portable.Android", "Flurry.Analytics.Portable.Android\Flurry.Analytics.Portable.Android.csproj", "{9299037E-E0AB-4B1A-A58E-262BDD04EED4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Flurry.Analytics.Portable.iOS", "Flurry.Analytics.Portable.iOS\Flurry.Analytics.Portable.iOS.csproj", "{3DC22A66-0C33-4869-8A6A-D0F6D58D1AEB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Flurry.Analytics.Portable.WindowsPhone", "Flurry.Analytics.Portable.WindowsPhone\Flurry.Analytics.Portable.WindowsPhone.csproj", "{7210B4CF-492C-4B6A-8968-3485C6D8EFF7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Flurry.Analytics", "Flurry.Analytics", "{3F78493C-B554-4255-95EA-BDDEA4EAA31B}"
+	ProjectSection(SolutionItems) = preProject
+		..\FlurryAnalytics\binding\Flurry.Analytics.WP8\Flurry.Analytics.WP8.dll = ..\FlurryAnalytics\binding\Flurry.Analytics.WP8\Flurry.Analytics.WP8.dll
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Flurry.Analytics.Android", "..\FlurryAnalytics\binding\Flurry.Analytics.Android\Flurry.Analytics.Android.csproj", "{537319CA-4CD0-4271-A3B3-157E41B877B3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Flurry.Analytics.iOS", "..\FlurryAnalytics\binding\Flurry.Analytics.iOS\Flurry.Analytics.iOS.csproj", "{B268C687-B474-41E5-9219-893DC13F9FE4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4FFED8D8-634A-4569-B8DC-8771EC93790E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4FFED8D8-634A-4569-B8DC-8771EC93790E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4FFED8D8-634A-4569-B8DC-8771EC93790E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4FFED8D8-634A-4569-B8DC-8771EC93790E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9299037E-E0AB-4B1A-A58E-262BDD04EED4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9299037E-E0AB-4B1A-A58E-262BDD04EED4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9299037E-E0AB-4B1A-A58E-262BDD04EED4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9299037E-E0AB-4B1A-A58E-262BDD04EED4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3DC22A66-0C33-4869-8A6A-D0F6D58D1AEB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3DC22A66-0C33-4869-8A6A-D0F6D58D1AEB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3DC22A66-0C33-4869-8A6A-D0F6D58D1AEB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3DC22A66-0C33-4869-8A6A-D0F6D58D1AEB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7210B4CF-492C-4B6A-8968-3485C6D8EFF7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7210B4CF-492C-4B6A-8968-3485C6D8EFF7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7210B4CF-492C-4B6A-8968-3485C6D8EFF7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7210B4CF-492C-4B6A-8968-3485C6D8EFF7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{537319CA-4CD0-4271-A3B3-157E41B877B3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{537319CA-4CD0-4271-A3B3-157E41B877B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{537319CA-4CD0-4271-A3B3-157E41B877B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{537319CA-4CD0-4271-A3B3-157E41B877B3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B268C687-B474-41E5-9219-893DC13F9FE4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B268C687-B474-41E5-9219-893DC13F9FE4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B268C687-B474-41E5-9219-893DC13F9FE4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B268C687-B474-41E5-9219-893DC13F9FE4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{537319CA-4CD0-4271-A3B3-157E41B877B3} = {3F78493C-B554-4255-95EA-BDDEA4EAA31B}
+		{B268C687-B474-41E5-9219-893DC13F9FE4} = {3F78493C-B554-4255-95EA-BDDEA4EAA31B}
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = Flurry.Analytics.Portable\Flurry.Analytics.Portable.csproj
+	EndGlobalSection
+EndGlobal
