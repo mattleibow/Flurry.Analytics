@@ -13,12 +13,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Flurry.Analytics.Portable.W
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Flurry.Analytics", "Flurry.Analytics", "{3F78493C-B554-4255-95EA-BDDEA4EAA31B}"
 	ProjectSection(SolutionItems) = preProject
-		..\FlurryAnalytics\binding\Flurry.Analytics.WP8\Flurry.Analytics.WP8.dll = ..\FlurryAnalytics\binding\Flurry.Analytics.WP8\Flurry.Analytics.WP8.dll
+		..\..\FlurryAnalytics\binding\Flurry.Analytics.WP8\FlurryWP8SDK.dll = ..\..\FlurryAnalytics\binding\Flurry.Analytics.WP8\FlurryWP8SDK.dll
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Flurry.Analytics.Android", "..\FlurryAnalytics\binding\Flurry.Analytics.Android\Flurry.Analytics.Android.csproj", "{537319CA-4CD0-4271-A3B3-157E41B877B3}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Flurry.Analytics.Android", "..\..\FlurryAnalytics\binding\Flurry.Analytics.Android\Flurry.Analytics.Android.csproj", "{537319CA-4CD0-4271-A3B3-157E41B877B3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Flurry.Analytics.iOS", "..\FlurryAnalytics\binding\Flurry.Analytics.iOS\Flurry.Analytics.iOS.csproj", "{B268C687-B474-41E5-9219-893DC13F9FE4}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Flurry.Analytics.iOS", "..\..\FlurryAnalytics\binding\Flurry.Analytics.iOS\Flurry.Analytics.iOS.csproj", "{B268C687-B474-41E5-9219-893DC13F9FE4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

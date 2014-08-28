@@ -55,8 +55,8 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="Flurry.Analytics.WP8">
-      <HintPath>..\..\FlurryAnalytics\binding\Flurry.Analytics.WP8\Flurry.Analytics.WP8.dll</HintPath>
+    <Reference Include="FlurryWP8SDK">
+      <HintPath>..\..\..\FlurryAnalytics\binding\Flurry.Analytics.WP8\FlurryWP8SDK.dll</HintPath>
     </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\$(TargetFrameworkIdentifier)\$(TargetFrameworkVersion)\Microsoft.$(TargetFrameworkIdentifier).$(TargetFrameworkVersion).Overrides.targets" />
