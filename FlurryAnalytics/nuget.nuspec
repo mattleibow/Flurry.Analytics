@@ -1,32 +1,21 @@
-<?xml version="1.0" encoding="utf-8"?>
-<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
     <metadata>
         <id>Flurry.Analytics</id>
-        <version>1.0.0-alpha2</version>
+        <version>1.0.0</version>
         <title>Flurry Analytics</title>
-        <authors>Matthew Leibowitz</authors>
+        <authors>.NET Development Addict</authors>
+        <licenseUrl>https://github.com/mattleibow/Flurry.Analytics/blob/master/FlurryAnalytics/component/License.md</licenseUrl>
+        <projectUrl>https://github.com/mattleibow/Flurry.Analytics</projectUrl>
+        <iconUrl>https://raw.githubusercontent.com/mattleibow/Flurry.Analytics/master/FlurryAnalytics/component/icons/flurry-analytics_128x128.png</iconUrl>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
-        <description>The Flurry Analytics Agent allows you to track the usage and behavior of your Android, iOS or Windows Phone application on users' phones for viewing in the Flurry Analytics system. It is designed to be as easy as possible with a basic setup complete in few minutes.</description>
+        <description>The Flurry Analytics Agent allows you to track the usage and behaviour of your Android, iOS or Windows Phone application on users' phones for viewing in the Flurry Analytics system. It is designed to be as easy as possible with a basic set-up complete in few minutes.</description>
         <copyright>Flurry, Inc. 2014</copyright>
-        <tags>flurry,analytics</tags>
-        <dependencies>
-            <group targetFramework="MonoAndroid23">
-                <dependency id="Xamarin.GooglePlayServicesGingerbread" version="18.0.0.1" />
-            </group>
-            <group targetFramework="MonoAndroid40">
-                <dependency id="Xamarin.GooglePlayServices" version="18.0.0.1" />
-            </group>
-            <group targetFramework="MonoAndroid41">
-                <dependency id="Xamarin.GooglePlayServicesJellyBean" version="18.0.0.1" />
-            </group>
-            <group targetFramework="MonoAndroid44">
-                <dependency id="Xamarin.GooglePlayServicesKitKat" version="18.0.0.1" />
-            </group>
-        </dependencies>
+        <tags>flurry,analytics,xamarin,ios,windows phone,android,mobile</tags>
     </metadata>
     <files>
-        <file src="Flurry.Analytics.Android.dll" target="lib/MonoAndroid23/Flurry.Analytics.Android.dll" />
-        <file src="Flurry.Analytics.iOS.dll" target="lib/MonoTouch/Flurry.Analytics.iOS.dll" />
-        <file src="Flurry.Analytics.WP8.dll" target="lib/wp8/Flurry.Analytics.WP8.dll" />
+        <file src="binding\Flurry.Analytics.Android\bin\Release\Flurry.Analytics.Android.dll" target="lib\MonoAndroid23\Flurry.Analytics.Android.dll" />
+        <file src="binding\Flurry.Analytics.iOS\bin\Release\Flurry.Analytics.iOS.dll" target="lib\MonoTouch10\Flurry.Analytics.iOS.dll" />
+        <file src="binding\Flurry.Analytics.WP8\FlurryWP8SDK.dll" target="lib\wp8\FlurryWP8SDK.dll" />
     </files>
 </package>
