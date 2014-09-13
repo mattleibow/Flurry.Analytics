@@ -31,6 +31,9 @@
     <DocumentationFile>bin\Release\Flurry.Analytics.Portable.XML</DocumentationFile>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Flurry.Analytics.iOS">
+      <HintPath>..\packages\Flurry.Analytics.1.0.0\lib\MonoTouch10\Flurry.Analytics.iOS.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
@@ -54,11 +57,8 @@
       <Link>TimedEvent.cs</Link>
     </Compile>
   </ItemGroup>
-  <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.MonoTouch.CSharp.targets" />
   <ItemGroup>
-    <ProjectReference Include="..\..\..\FlurryAnalytics\binding\Flurry.Analytics.iOS\Flurry.Analytics.iOS.csproj">
-      <Project>{B268C687-B474-41E5-9219-893DC13F9FE4}</Project>
-      <Name>Flurry.Analytics.iOS</Name>
-    </ProjectReference>
+    <None Include="packages.config" />
   </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.MonoTouch.CSharp.targets" />
 </Project>

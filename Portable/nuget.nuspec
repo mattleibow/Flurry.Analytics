@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+    <metadata>
+        <id>Flurry.Analytics.Portable</id>
+        <version>1.0.0</version>
+        <title>Flurry Analytics Portable</title>
+        <authors>.NET Development Addict</authors>
+        <licenseUrl>https://github.com/mattleibow/Flurry.Analytics/blob/master/FlurryAnalytics/component/License.md</licenseUrl>
+        <projectUrl>https://github.com/mattleibow/Flurry.Analytics</projectUrl>
+        <iconUrl>https://raw.githubusercontent.com/mattleibow/Flurry.Analytics/master/FlurryAnalytics/component/icons/flurry-analytics_128x128.png</iconUrl>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <description>The Flurry Analytics Agent allows you to track the usage and behaviour of your Android, iOS or Windows Phone application on users' phones for viewing in the Flurry Analytics system. It is designed to be as easy as possible with a basic set-up complete in few minutes.</description>
+        <copyright>Flurry, Inc. 2014</copyright>
+        <tags>flurry,analytics,xamarin,ios,windows phone,android,mobile</tags>
+        <dependencies>
+            <dependency id="Flurry.Analytics" version="1.0.0" />
+        </dependencies>
+    </metadata>
+    <files>
+        <file src="library\Flurry.Analytics.Portable.Android\bin\Release\Flurry.Analytics.Portable.dll" target="lib\MonoAndroid23\Flurry.Analytics.Portable.dll" />
+        <file src="library\Flurry.Analytics.Portable.iOS\bin\Release\Flurry.Analytics.Portable.dll" target="lib\MonoTouch10\Flurry.Analytics.Portable.dll" />
+        <file src="library\Flurry.Analytics.Portable\bin\Release\Flurry.Analytics.Portable.dll" target="lib\portable-wp80+win80+wpa81+net45+MonoTouch10+MonoAndroid10\Flurry.Analytics.Portable.dll" />
+        <file src="library\Flurry.Analytics.Portable.WindowsPhone\bin\Release\Flurry.Analytics.Portable.dll" target="lib\wp8\Flurry.Analytics.Portable.dll" />
+
+        <file src="library\Flurry.Analytics.Portable.Android\bin\Release\Flurry.Analytics.Portable.xml" target="lib\MonoAndroid23\Flurry.Analytics.Portable.xml" />
+        <file src="library\Flurry.Analytics.Portable.iOS\bin\Release\Flurry.Analytics.Portable.xml" target="lib\MonoTouch10\Flurry.Analytics.Portable.xml" />
+        <file src="library\Flurry.Analytics.Portable\bin\Release\Flurry.Analytics.Portable.xml" target="lib\portable-wp80+win80+wpa81+net45+MonoTouch10+MonoAndroid10\Flurry.Analytics.Portable.xml" />
+        <file src="library\Flurry.Analytics.Portable.WindowsPhone\bin\Release\Flurry.Analytics.Portable.xml" target="lib\wp8\Flurry.Analytics.Portable.xml" />
+	</files>
+</package>

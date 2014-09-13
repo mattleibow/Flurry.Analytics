@@ -192,6 +192,22 @@ namespace Flurry.Analytics.Portable
 		// Methods
 
 		/// <summary>
+		/// Returns True if Flurry Analytics is supported on this platform,
+		/// otherwise, False.
+		/// </summary>
+		public static bool IsSupported
+		{
+			get
+			{
+#if WINDOWS_PHONE || __ANDROID__ || __IOS__
+				return true;
+#else
+				return false;
+#endif
+			}
+		}
+
+		/// <summary>
 		/// Explicitly specifies the App Version that Flurry Analytics will use to group collected analytics data.
 		/// </summary>
 		/// <param name="version">The app version to use for the app.</param>

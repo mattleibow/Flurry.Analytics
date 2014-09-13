@@ -37,6 +37,10 @@
     <DocumentationFile>bin\Release\Flurry.Analytics.Portable.XML</DocumentationFile>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Flurry.Analytics.Android, Version=4.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Flurry.Analytics.1.0.0\lib\MonoAndroid23\Flurry.Analytics.Android.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
@@ -56,11 +60,8 @@
       <Link>TimedEvent.cs</Link>
     </Compile>
   </ItemGroup>
-  <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
   <ItemGroup>
-    <ProjectReference Include="..\..\..\FlurryAnalytics\binding\Flurry.Analytics.Android\Flurry.Analytics.Android.csproj">
-      <Project>{537319CA-4CD0-4271-A3B3-157E41B877B3}</Project>
-      <Name>Flurry.Analytics.Android</Name>
-    </ProjectReference>
+    <None Include="packages.config" />
   </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
 </Project>
