@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Text;
+using System.Reflection;
 
 #if WINDOWS_PHONE
 using NativeFlurry = FlurryWP8SDK.Api;
@@ -36,6 +37,40 @@ namespace Flurry.Analytics.Portable
 		/// </summary>
 		/// <value>The API key.</value>
 		public static string ApiKey { get; set; }
+
+		/// <summary>
+		/// Returns True if Flurry Analytics is supported on this platform,
+		/// otherwise, False.
+		/// </summary>
+		public static bool IsSupported
+		{
+			get
+			{
+#if WINDOWS_PHONE || __ANDROID__ || __IOS__
+				return true;
+#else
+				return false;
+#endif
+			}
+		}
+
+		/// <summary>
+		/// Gets a value that represents the version number string of the analytics API.
+		/// </summary>
+		public static string ApiVersion
+		{
+			get
+			{
+#if WINDOWS_PHONE || __ANDROID__ || __IOS__
+				Assembly assembly = typeof(NativeFlurry).Assembly;
+				AssemblyName name = assembly.GetName();
+				Version version = name.Version;
+				return version.ToString();
+#else
+				return string.Empty;
+#endif
+			}
+		}
 
 		// Platform specific methods
 
@@ -190,22 +225,6 @@ namespace Flurry.Analytics.Portable
 #endif
 
 		// Methods
-
-		/// <summary>
-		/// Returns True if Flurry Analytics is supported on this platform,
-		/// otherwise, False.
-		/// </summary>
-		public static bool IsSupported
-		{
-			get
-			{
-#if WINDOWS_PHONE || __ANDROID__ || __IOS__
-				return true;
-#else
-				return false;
-#endif
-			}
-		}
 
 		/// <summary>
 		/// Explicitly specifies the App Version that Flurry Analytics will use to group collected analytics data.
