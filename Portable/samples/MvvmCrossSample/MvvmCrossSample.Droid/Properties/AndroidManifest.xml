@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:installLocation="auto" android:versionName="2.0.0.0">
+	<uses-sdk />
+	<application android:label="Flurry Analytics Portable" android:icon="@drawable/Icon"></application>
+</manifest>
