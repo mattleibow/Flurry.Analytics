@@ -1,45 +1,14 @@
-﻿// --------------------------------------------------------------------------------------------------------------------
-// <summary>
-//    Defines the BaseView type.
-// </summary>
-// --------------------------------------------------------------------------------------------------------------------
+﻿using Cirrious.MvvmCross.Dialog.Touch;
+using MonoTouch.UIKit;
+
 namespace MvvmCrossSample.iOS.Views
 {
-	using Cirrious.MvvmCross.Touch.Views;
-
-	using MonoTouch.Foundation;
-	using MonoTouch.UIKit;
-
-	/// <summary>
-	/// Defines the BaseView type.
-	/// </summary>
-	public abstract class BaseView : MvxViewController
+	public abstract class BaseView : MvxDialogViewController
 	{
-		/// <summary>
-		/// Initializes a new instance of the <see cref="BaseView" /> class.
-		/// </summary>
 		protected BaseView()
+			: base (UITableViewStyle.Grouped, null, true)
 		{
-			this.Initialize();
-		}
-
-		/// <summary>
-		/// Initializes a new instance of the <see cref="BaseView"/> class.
-		/// </summary>
-		/// <param name="nibName">Name of the nib.</param>
-		/// <param name="bundle">The bundle.</param>
-		protected BaseView(string nibName, NSBundle bundle)
-			: base(nibName, bundle)
-		{
-			this.Initialize();
-		}
-
-		/// <summary>
-		/// Initializes this instance.
-		/// </summary>
-		private void Initialize()
-		{
-			this.EdgesForExtendedLayout = UIRectEdge.None;
+			EdgesForExtendedLayout = UIRectEdge.None;
 		}
 	}
 }

@@ -6,7 +6,7 @@ namespace MvvmCrossSample.Core.Converters
 {
 	public class EnumToEnumerableConverter : IMvxValueConverter
 	{
-		public object Convert(object value, Type targetType, object parameter, System.Globalization.CultureInfo culture)
+		public virtual object Convert(object value, Type targetType, object parameter, System.Globalization.CultureInfo culture)
 		{
 			Type type = null;
 			if (value != null)
@@ -19,7 +19,7 @@ namespace MvvmCrossSample.Core.Converters
 			return new object[0];
 		}
 
-		public object ConvertBack(object value, Type targetType, object parameter, System.Globalization.CultureInfo culture)
+		public virtual object ConvertBack(object value, Type targetType, object parameter, System.Globalization.CultureInfo culture)
 		{
 			throw new NotImplementedException();
 		}

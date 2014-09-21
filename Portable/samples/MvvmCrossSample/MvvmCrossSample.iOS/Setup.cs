@@ -1,34 +1,23 @@
-﻿// --------------------------------------------------------------------------------------------------------------------
-// <summary>
-//    Defines the Setup type.
-// </summary>
-// --------------------------------------------------------------------------------------------------------------------
+﻿using Cirrious.MvvmCross.Touch.Platform;
+using Cirrious.MvvmCross.Touch.Views.Presenters;
+using Cirrious.MvvmCross.ViewModels;
+using Cirrious.MvvmCross.Dialog.Touch;
+using Flurry.Analytics.Portable;
+
 namespace MvvmCrossSample.iOS
 {
-	using Cirrious.MvvmCross.Touch.Platform;
-	using Cirrious.MvvmCross.Touch.Views.Presenters;
-	using Cirrious.MvvmCross.ViewModels;
-
-	/// <summary>
-	///    Defines the Setup type.
-	/// </summary>
-	public class Setup : MvxTouchSetup
+	public class Setup : MvxTouchDialogSetup
 	{
-		/// <summary>
-		/// Initializes a new instance of the <see cref="Setup"/> class.
-		/// </summary>
-		/// <param name="applicationDelegate">The application delegate.</param>
-		/// <param name="presenter">The presenter.</param>
 		public Setup(MvxApplicationDelegate applicationDelegate, IMvxTouchViewPresenter presenter)
 			: base(applicationDelegate, presenter)
 		{
+			// set up the iOS Application Api Key
 			AnalyticsApi.ApiKey = "PQSZJRK4B5BW8Q7YQQXF";
+
+			// Starting and ending the sessions specifically for iOS
+			AnalyticsApi.StartSession();
 		}
 
-		/// <summary>
-		/// Creates the app.
-		/// </summary>
-		/// <returns>An instance of IMvxApplication</returns>
 		protected override IMvxApplication CreateApp()
 		{
 			return new Core.App();

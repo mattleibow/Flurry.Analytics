@@ -1,17 +1,9 @@
-﻿// --------------------------------------------------------------------------------------------------------------------
-// <summary>
-//    Defines the LocationPluginBootstrap type.
-// </summary>
-// --------------------------------------------------------------------------------------------------------------------
+using Cirrious.CrossCore.Plugins;
+
 namespace MvvmCrossSample.iOS.Bootstrap
 {
-	using Cirrious.CrossCore.Plugins;
-
-	/// <summary> 
-	///  Defines the LocationPluginBootstrap type.
-	/// </summary>
-	public class LocationPluginBootstrap
-		: MvxPluginBootstrapAction<Cirrious.MvvmCross.Plugins.Location.PluginLoader>
-	{
-	}
+    public class LocationPluginBootstrap
+        : MvxLoaderPluginBootstrapAction<Cirrious.MvvmCross.Plugins.Location.PluginLoader, Cirrious.MvvmCross.Plugins.Location.Touch.Plugin>
+    {
+    }
 }

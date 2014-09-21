@@ -22,37 +22,34 @@ namespace MvvmCrossSample.Droid.Views
 			base.OnViewModelSet();
 
 			// show a progress box if there is some work
-			if (ViewModel != null)
+			var events = ViewModel as EventsViewModel;
+			if (events != null)
 			{
-				var events = ViewModel as EventsViewModel;
-				if (events != null)
+				ProgressDialog progress = null;
+				events.PropertyChanged += (sender, e) =>
 				{
-					ProgressDialog progress = null;
-					events.PropertyChanged += (sender, e) =>
+					if (e.PropertyName == "IsWorking")
 					{
-						if (e.PropertyName == "IsWorking")
+						if (events.IsWorking)
 						{
-							if (events.IsWorking)
+							if (progress == null)
 							{
-								if (progress == null)
-								{
-									progress = new ProgressDialog(this);
-									progress.SetProgressStyle(ProgressDialogStyle.Spinner);
-									progress.SetMessage("Doing absolutely nothing in the background...");
-									progress.Show();
-								}
-							}
-							else
-							{
-								if (progress != null)
-								{
-									progress.Dismiss();
-									progress = null;
-								}
+								progress = new ProgressDialog(this);
+								progress.SetProgressStyle(ProgressDialogStyle.Spinner);
+								progress.SetMessage("Doing absolutely nothing in the background...");
+								progress.Show();
 							}
 						}
-					};
-				}
+						else
+						{
+							if (progress != null)
+							{
+								progress.Dismiss();
+								progress = null;
+							}
+						}
+					}
+				};
 			}
 		}
 	}

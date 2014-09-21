@@ -41,7 +41,19 @@ namespace MvvmCrossSample.Core.ViewModels
 					error => { });
 			}
 
-			UserGender = Gender.Unknown;
+			// defaults
+			userAge = 0;
+			userId = string.Empty;
+			userGender = Gender.Unknown;
+			userLocation = new MvxGeoLocation
+			{
+				Coordinates = new MvxCoordinates
+				{
+					Latitude = 0,
+					Longitude = 0,
+					Accuracy = 0
+				}
+			};
 		}
 
 		public bool IsFlurrySupported
