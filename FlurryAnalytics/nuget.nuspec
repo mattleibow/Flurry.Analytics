@@ -17,5 +17,6 @@
         <file src="binding\Flurry.Analytics.Android\bin\Release\Flurry.Analytics.Android.dll" target="lib\MonoAndroid23\Flurry.Analytics.Android.dll" />
         <file src="binding\Flurry.Analytics.iOS\bin\Release\Flurry.Analytics.iOS.dll" target="lib\MonoTouch10\Flurry.Analytics.iOS.dll" />
         <file src="binding\Flurry.Analytics.WP8\FlurryWP8SDK.dll" target="lib\wp8\FlurryWP8SDK.dll" />
+        <file src="binding\Flurry.Analytics.WP7\FlurryWP8SDK.dll" target="lib\sl4-wp71\FlurryWP8SDK.dll" />
     </files>
 </package>

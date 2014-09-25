@@ -22,6 +22,7 @@ libraries:
   ios: binding/Flurry.Analytics.iOS/bin/release/Flurry.Analytics.iOS.dll
   android: binding/Flurry.Analytics.Android/bin/release/Flurry.Analytics.Android.dll
   winphone-8.0: binding/Flurry.Analytics.WP8/FlurryWP8SDK.dll
+  winphone-7.1: binding/Flurry.Analytics.WP7/FlurryWP8SDK.dll
 
 
 samples: 
@@ -32,6 +33,8 @@ samples:
     path: samples/Flurry.Analytics.Android.Sample/Flurry.Analytics.Android.Sample.sln
   - name: "Windows Phone 8 Sample"
     path: samples/Flurry.Analytics.WindowsPhone.Sample/Flurry.Analytics.WindowsPhone.Sample.sln
+  - name: "Windows Phone 7 Sample"
+    path: samples/Flurry.Analytics.WindowsPhone7.Sample/Flurry.Analytics.WindowsPhone7.Sample.sln
 
 
 icons: 
