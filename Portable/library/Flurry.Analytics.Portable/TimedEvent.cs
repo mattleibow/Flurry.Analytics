@@ -10,8 +10,6 @@ namespace Flurry.Analytics.Portable
 	/// </summary>
 	public class TimedEvent : IDisposable
 	{
-		private IDictionary<string, string> providedParameters;
-
 		internal TimedEvent(string eventId)
 			: this(eventId, null)
 		{
@@ -20,7 +18,10 @@ namespace Flurry.Analytics.Portable
 		internal TimedEvent(string eventId, IDictionary<string, string> parameters)
 		{
 			EventId = eventId;
-			providedParameters = parameters;
+            if (parameters != null)
+            {
+                Parameters = new Dictionary<String, string>(parameters);
+            }
 		}
 
 		/// <summary>
@@ -33,17 +34,14 @@ namespace Flurry.Analytics.Portable
 		/// Gets the parameters associated with the event that will be sent to the server.
 		/// </summary>
 		/// <value>The parameters associated with the event.</value>
-		public IReadOnlyDictionary<string, string> Parameters
-		{
-			get { return (IReadOnlyDictionary<string, string>)providedParameters; }
-		}
+		public IDictionary<string, string> Parameters { get; private set; }
 
 		/// <summary>
 		/// Ends the timed event.
 		/// </summary>
 		public void EndEvent()
 		{
-			EndEvent(providedParameters);
+			EndEvent(Parameters);
 		}
 
 		/// <summary>
