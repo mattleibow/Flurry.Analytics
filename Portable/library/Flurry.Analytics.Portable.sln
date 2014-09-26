@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
-VisualStudioVersion = 12.0.30501.0
+VisualStudioVersion = 12.0.30723.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Flurry.Analytics.Portable", "Flurry.Analytics.Portable\Flurry.Analytics.Portable.csproj", "{4FFED8D8-634A-4569-B8DC-8771EC93790E}"
 EndProject
@@ -10,6 +10,10 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Flurry.Analytics.Portable.iOS", "Flurry.Analytics.Portable.iOS\Flurry.Analytics.Portable.iOS.csproj", "{3DC22A66-0C33-4869-8A6A-D0F6D58D1AEB}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Flurry.Analytics.Portable.WindowsPhone", "Flurry.Analytics.Portable.WindowsPhone\Flurry.Analytics.Portable.WindowsPhone.csproj", "{7210B4CF-492C-4B6A-8968-3485C6D8EFF7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Flurry.Analytics.Portable.Portable", "Flurry.Analytics.Portable.Portable\Flurry.Analytics.Portable.Portable.csproj", "{4FFED8D8-634A-4569-B8DC-8771EC93790F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Flurry.Analytics.Portable.WindowsPhone7", "Flurry.Analytics.Portable.WindowsPhone7\Flurry.Analytics.Portable.WindowsPhone7.csproj", "{1A9A5863-B3B2-4DC6-98A1-A3148D85A8A5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +37,14 @@ Global
 		{7210B4CF-492C-4B6A-8968-3485C6D8EFF7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7210B4CF-492C-4B6A-8968-3485C6D8EFF7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7210B4CF-492C-4B6A-8968-3485C6D8EFF7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4FFED8D8-634A-4569-B8DC-8771EC93790F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4FFED8D8-634A-4569-B8DC-8771EC93790F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4FFED8D8-634A-4569-B8DC-8771EC93790F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4FFED8D8-634A-4569-B8DC-8771EC93790F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1A9A5863-B3B2-4DC6-98A1-A3148D85A8A5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1A9A5863-B3B2-4DC6-98A1-A3148D85A8A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1A9A5863-B3B2-4DC6-98A1-A3148D85A8A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1A9A5863-B3B2-4DC6-98A1-A3148D85A8A5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

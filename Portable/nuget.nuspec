@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
     <metadata>
         <id>Flurry.Analytics.Portable</id>
-        <version>1.0.0</version>
+        <version>1.0.3</version>
         <title>Flurry Analytics Portable</title>
         <authors>.NET Development Addict</authors>
         <licenseUrl>https://github.com/mattleibow/Flurry.Analytics/blob/master/FlurryAnalytics/component/License.md</licenseUrl>
@@ -13,14 +13,17 @@
         <copyright>Flurry, Inc. 2014</copyright>
         <tags>flurry,analytics,xamarin,ios,windows phone,android,mobile</tags>
         <dependencies>
+            <group targetFramework="WindowsPhone7.1">
+                <dependency id="Flurry.Analytics" version="1.0.1" />
+            </group>
             <group targetFramework="WindowsPhone8.0">
-                <dependency id="Flurry.Analytics" version="1.0.0" />
+                <dependency id="Flurry.Analytics" version="1.0.1" />
             </group>
             <group targetFramework="MonoTouch1.0">
-                <dependency id="Flurry.Analytics" version="1.0.0" />
+                <dependency id="Flurry.Analytics" version="1.0.1" />
             </group>
             <group targetFramework="MonoAndroid1.0">
-                <dependency id="Flurry.Analytics" version="1.0.0" />
+                <dependency id="Flurry.Analytics" version="1.0.1" />
             </group>
         </dependencies>
     </metadata>
@@ -29,8 +32,12 @@
         <file src="library\Flurry.Analytics.Portable.Android\bin\Release\Flurry.Analytics.Portable.XML" target="lib\MonoAndroid23\Flurry.Analytics.Portable.xml" />
         <file src="library\Flurry.Analytics.Portable.iOS\bin\Release\Flurry.Analytics.Portable.dll" target="lib\MonoTouch10\Flurry.Analytics.Portable.dll" />
         <file src="library\Flurry.Analytics.Portable.iOS\bin\Release\Flurry.Analytics.Portable.XML" target="lib\MonoTouch10\Flurry.Analytics.Portable.xml" />
+        <file src="library\Flurry.Analytics.Portable.Portable\bin\Release\Flurry.Analytics.Portable.dll" target="lib\portable-net4+sl4+wp7+win8\Flurry.Analytics.Portable.dll" />
+        <file src="library\Flurry.Analytics.Portable.Portable\bin\Release\Flurry.Analytics.Portable.XML" target="lib\portable-net4+sl4+wp7+win8\Flurry.Analytics.Portable.XML" />
         <file src="library\Flurry.Analytics.Portable\bin\Release\Flurry.Analytics.Portable.dll" target="lib\portable-wp80+win80+wpa81+net45+sl50+MonoTouch10+MonoAndroid10\Flurry.Analytics.Portable.dll" />
         <file src="library\Flurry.Analytics.Portable\bin\Release\Flurry.Analytics.Portable.XML" target="lib\portable-wp80+win80+wpa81+net45+sl50+MonoTouch10+MonoAndroid10\Flurry.Analytics.Portable.xml" />
+        <file src="library\Flurry.Analytics.Portable.WindowsPhone7\bin\Release\Flurry.Analytics.Portable.dll" target="lib\wp71\Flurry.Analytics.Portable.dll" />
+        <file src="library\Flurry.Analytics.Portable.WindowsPhone7\bin\Release\Flurry.Analytics.Portable.XML" target="lib\wp71\Flurry.Analytics.Portable.xml" />
         <file src="library\Flurry.Analytics.Portable.WindowsPhone\bin\Release\Flurry.Analytics.Portable.dll" target="lib\wp8\Flurry.Analytics.Portable.dll" />
         <file src="library\Flurry.Analytics.Portable.WindowsPhone\bin\Release\Flurry.Analytics.Portable.XML" target="lib\wp8\Flurry.Analytics.Portable.xml" />
     </files>

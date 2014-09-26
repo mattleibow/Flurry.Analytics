@@ -14,7 +14,8 @@
     <AndroidResgenFile>Resources\Resource.Designer.cs</AndroidResgenFile>
     <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
     <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
-    <TargetFrameworkVersion>v4.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <AndroidUseLatestPlatformSdk />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -36,8 +37,13 @@
     <AndroidUseSharedRuntime>False</AndroidUseSharedRuntime>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Flurry.Analytics.Portable">
-      <HintPath>..\..\packages\Flurry.Analytics.Portable.1.0.0\lib\MonoAndroid23\Flurry.Analytics.Portable.dll</HintPath>
+    <Reference Include="Flurry.Analytics.Android, Version=4.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\packages\Flurry.Analytics.1.0.1\lib\MonoAndroid23\Flurry.Analytics.Android.dll</HintPath>
+    </Reference>
+    <Reference Include="Flurry.Analytics.Portable, Version=1.0.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\packages\Flurry.Analytics.Portable.1.0.3\lib\MonoAndroid23\Flurry.Analytics.Portable.dll</HintPath>
     </Reference>
     <Reference Include="Mono.Android" />
     <Reference Include="mscorlib" />
@@ -71,9 +77,6 @@
     </Reference>
     <Reference Include="Cirrious.MvvmCross.Plugins.Location.Droid">
       <HintPath>..\..\packages\MvvmCross.HotTuna.Plugin.Location.3.2.1\lib\MonoAndroid\Cirrious.MvvmCross.Plugins.Location.Droid.dll</HintPath>
-    </Reference>
-    <Reference Include="Flurry.Analytics.Android">
-      <HintPath>..\..\packages\Flurry.Analytics.1.0.0\lib\MonoAndroid23\Flurry.Analytics.Android.dll</HintPath>
     </Reference>
     <Reference Include="System.Net">
       <HintPath>..\..\packages\MvvmCross.PortableSupport.3.2.1\lib\MonoAndroid\System.Net.dll</HintPath>

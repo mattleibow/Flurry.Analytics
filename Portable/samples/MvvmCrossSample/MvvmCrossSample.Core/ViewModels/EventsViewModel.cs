@@ -116,7 +116,7 @@ namespace MvvmCrossSample.Core.ViewModels
 						new Dictionary<string, string> { { "Parameter", EventParameter } }))
 					{
 						await Task.Delay(TimeSpan.FromSeconds(3));
-						timed.EndEvent(new Dictionary<string, string> { { "AdditionalParameter", "User loved this task." } });
+						timed.Parameters.Add("AdditionalParameter", "User loved this task.");
 					}
 					IsWorking = false;
 				});

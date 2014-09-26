@@ -63,11 +63,15 @@ namespace Flurry.Analytics.Portable
 			{
 #if WINDOWS_PHONE || __ANDROID__ || __IOS__
 				Assembly assembly = typeof(NativeFlurry).Assembly;
-				AssemblyName name = assembly.GetName();
-				Version version = name.Version;
+#if SILVERLIGHT
+                AssemblyName name = new AssemblyName(assembly.FullName);
+#else
+                AssemblyName name = assembly.GetName();
+#endif
+                Version version = name.Version;
 				return version.ToString();
 #else
-				return string.Empty;
+                return string.Empty;
 #endif
 			}
 		}
