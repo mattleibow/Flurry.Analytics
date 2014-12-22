@@ -9,8 +9,6 @@
     <RootNamespace>Flurry.Analytics</RootNamespace>
     <MonoAndroidResourcePrefix>Resources</MonoAndroidResourcePrefix>
     <MonoAndroidAssetsPrefix>Assets</MonoAndroidAssetsPrefix>
-    <AndroidUseLatestPlatformSdk>
-    </AndroidUseLatestPlatformSdk>
     <AssemblyName>Flurry.Analytics.Android</AssemblyName>
     <TargetFrameworkVersion>v2.3</TargetFrameworkVersion>
   </PropertyGroup>
@@ -51,6 +49,6 @@
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Novell\Xamarin.Android.Bindings.targets" />
   <ItemGroup>
-    <EmbeddedJar Include="Jars\FlurryAnalytics-4.1.0.jar" />
+    <EmbeddedJar Include="Jars\FlurryAnalytics-5.0.0.jar" />
   </ItemGroup>
 </Project>

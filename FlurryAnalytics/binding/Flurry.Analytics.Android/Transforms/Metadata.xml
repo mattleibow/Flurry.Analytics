@@ -2,23 +2,34 @@
 
   <!-- remove internal namespaces -->
   <remove-node path="/api/package[starts-with(@name, 'com.flurry.sdk')]" />
-  <remove-node path="/api/package[starts-with(@name, 'com.flurry.android.impl')]" />
-  
+
   <remove-node path="/api/package[@name='com.flurry.android']/class[@name='InstallReceiver']" />
+  <remove-node path="/api/package[@name='com.flurry.android']/class[@name='PurchaseState']" />
+  <remove-node path="/api/package[@name='com.flurry.android']/class[@name='PurchaseType']" />
   <remove-node path="/api/package[@name='com.flurry.android']/interface[@name='Constants']" />
 
   <!-- use C# namespaces -->
   <attr path="/api/package[@name='com.flurry.android']" name="managedName">Flurry.Analytics</attr>
   <attr path="/api/package[@name='com.flurry.android']/class[@name='FlurryAgent']" name="managedName">FlurryAgent</attr>
+  <attr path="/api/package[@name='com.flurry.android']/class[@name='FlurryEventRecordStatus']" name="managedName">FlurryEventStatus</attr>
 
+  <!-- rename fields -->
+  <attr path="/api/package[@name='com.flurry.android']/class[@name='FlurryEventRecordStatus']/field[@name='kFlurryEventFailed']" name="managedName">Failed</attr>
+  <attr path="/api/package[@name='com.flurry.android']/class[@name='FlurryEventRecordStatus']/field[@name='kFlurryEventLogCountExceeded']" name="managedName">LogCountExceeded</attr>
+  <attr path="/api/package[@name='com.flurry.android']/class[@name='FlurryEventRecordStatus']/field[@name='kFlurryEventLoggingDelayed']" name="managedName">LoggingDelayed</attr>
+  <attr path="/api/package[@name='com.flurry.android']/class[@name='FlurryEventRecordStatus']/field[@name='kFlurryEventParamsCountExceeded']" name="managedName">ParamsCountExceeded</attr>
+  <attr path="/api/package[@name='com.flurry.android']/class[@name='FlurryEventRecordStatus']/field[@name='kFlurryEventRecorded']" name="managedName">Recorded</attr>
+  <attr path="/api/package[@name='com.flurry.android']/class[@name='FlurryEventRecordStatus']/field[@name='kFlurryEventUniqueCountExceeded']" name="managedName">UniqueCountExceeded</attr>
+
+  <!-- hide internal members -->
   <attr path="/api/package[@name='com.flurry.android']/class[@name='FlurryAgent']/method[@name='setGender']" name="visibility">internal</attr>
 
   <!-- rename parameters -->
+  <attr path="/api/package[@name='com.flurry.android']/class[@name='FlurryAgent']/method[@name='init']/parameter[@name='p0']" name="name">context</attr>
   <attr path="/api/package[@name='com.flurry.android']/class[@name='FlurryAgent']/method[@name='onStartSession']/parameter[@name='p0']" name="name">context</attr>
   <attr path="/api/package[@name='com.flurry.android']/class[@name='FlurryAgent']/method[@name='onStartSession']/parameter[@name='p1']" name="name">apiKey</attr>
   <attr path="/api/package[@name='com.flurry.android']/class[@name='FlurryAgent']/method[@name='onEndSession']/parameter[@name='p0']" name="name">context</attr>
   <attr path="/api/package[@name='com.flurry.android']/class[@name='FlurryAgent']/method[@name='setVersionName']/parameter[@name='p0']" name="name">versionName</attr>
-  <attr path="/api/package[@name='com.flurry.android']/class[@name='FlurryAgent']/method[@name='setReportUrl']/parameter[@name='p0']" name="name">reportUrl</attr>
   <attr path="/api/package[@name='com.flurry.android']/class[@name='FlurryAgent']/method[@name='setReportLocation']/parameter[@name='p0']" name="name">reportLocation</attr>
   <attr path="/api/package[@name='com.flurry.android']/class[@name='FlurryAgent']/method[@name='setLocation']/parameter[@name='p0']" name="name">latitude</attr>
   <attr path="/api/package[@name='com.flurry.android']/class[@name='FlurryAgent']/method[@name='setLocation']/parameter[@name='p1']" name="name">longitude</attr>

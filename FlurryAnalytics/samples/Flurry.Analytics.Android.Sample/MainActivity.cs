@@ -27,14 +27,15 @@ namespace Flurry.Analytics.Android.Sample
 			VersionLabel.Text = FlurryAgent.ReleaseVersion;
 
 			LogEventButton.Click += delegate {
+				FlurryEventStatus status;
 				if (string.IsNullOrEmpty (EventParameterText.Text))
-					FlurryAgent.LogEvent ("Button Click");
+					status = FlurryAgent.LogEvent ("Button Click");
 				else
-					FlurryAgent.LogEvent ("Button Click", new Dictionary<string, string> { 
+					status = FlurryAgent.LogEvent ("Button Click", new Dictionary<string, string> { 
 						{ "Log Parameter", EventParameterText.Text } 
 					});
 
-				using (Toast alert = Toast.MakeText (this, "Your event was logged along with the specified parameter.", ToastLength.Short))
+				using (Toast alert = Toast.MakeText (this, "Your event was logged along with the specified parameter. Result: " + status, ToastLength.Short))
 					alert.Show ();
 			};
 		}
@@ -43,13 +44,15 @@ namespace Flurry.Analytics.Android.Sample
 		{
 			base.OnStart ();
 
-			FlurryAgent.OnStartSession (this, "36TWHT3RMTBTF2G46KGH");
+			// this is not needed for android 4.0 and above
+			FlurryAgent.OnStartSession (this);
 		}
 
 		protected override void OnStop ()
 		{
 			base.OnStop ();
 
+			// this is not needed for android 4.0 and above
 			FlurryAgent.OnEndSession (this);
 		}
 	}
