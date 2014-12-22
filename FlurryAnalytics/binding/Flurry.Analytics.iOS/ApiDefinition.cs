@@ -1,6 +1,10 @@
 using System;
 
+#if __UNIFIED__
+using Foundation;
+#else
 using MonoTouch.Foundation;
+#endif
 
 namespace Flurry.Analytics {
 
@@ -37,6 +41,9 @@ namespace Flurry.Analytics {
 		[Static, Export ("startSession:withOptions:")]
 		void StartSession (string apiKey, NSObject options);
 
+		[Static, Export ("activeSessionExists")]
+		bool ActiveSessionExists ();
+
 		[Static, Export ("pauseBackgroundSession")]
 		void PauseBackgroundSession ();
 
@@ -50,7 +57,7 @@ namespace Flurry.Analytics {
 		void LogEvent (string eventName);
 
 		[Static, Export ("logEvent:withParameters:")]
-		void LogEvent (string eventName, NSDictionary parameters);
+		FlurryEventStatus LogEvent (string eventName, NSDictionary parameters);
 
 		[Static, Export ("logError:message:exception:")]
 		void LogError (string errorID, string message, NSException exception);
@@ -59,10 +66,10 @@ namespace Flurry.Analytics {
 		void LogError (string errorID, string message, NSError error);
 
 		[Static, Export ("logEvent:timed:")]
-		void LogEvent (string eventName, bool timed);
+		FlurryEventStatus LogEvent (string eventName, bool timed);
 
 		[Static, Export ("logEvent:withParameters:timed:")]
-		void LogEvent (string eventName, NSDictionary parameters, bool timed);
+		FlurryEventStatus LogEvent (string eventName, NSDictionary parameters, bool timed);
 
 		[Static, Export ("endTimedEvent:withParameters:")]
 		void EndTimedEvent (string eventName, [NullAllowed] NSDictionary parameters);

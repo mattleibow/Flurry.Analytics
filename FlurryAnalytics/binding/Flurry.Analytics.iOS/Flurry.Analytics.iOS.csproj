@@ -42,12 +42,12 @@
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Xamarin.ObjcBinding.CSharp.targets" />
   <ItemGroup>
-    <ObjcBindingNativeLibrary Include="libFlurry_5.2.0.a" />
+    <ObjcBindingNativeLibrary Include="libFlurry_6.0.0.a" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AssemblyInfo.cs" />
-    <Compile Include="libFlurry_5.2.0.linkwith.cs">
-      <DependentUpon>libFlurry_5.2.0.a</DependentUpon>
+    <Compile Include="libFlurry.linkwith.cs">
+      <DependentUpon>libFlurry_6.0.0.a</DependentUpon>
     </Compile>
     <Compile Include="Extras.cs" />
   </ItemGroup>

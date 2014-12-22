@@ -7,7 +7,11 @@
         <!--class Prefix:identifier View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="Flurry_Analytics_iOS_SampleViewController" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="SampleViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="52"/>
+                        <viewControllerLayoutGuide type="bottom" id="53"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
