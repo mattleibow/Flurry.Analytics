@@ -16,10 +16,15 @@ using NativeFlurry = Flurry.Analytics.FlurryAgent;
 using NativeGender = Flurry.Analytics.Gender;
 using NativeParameterCollection = System.Collections.Generic.IDictionary<System.String, System.String>;
 #elif __IOS__
+#if __UNIFIED__
+using Foundation;
+using NativeParameterCollection = Foundation.NSDictionary;
+#else
 using MonoTouch.Foundation;
+using NativeParameterCollection = MonoTouch.Foundation.NSDictionary;
+#endif
 using NativeFlurry = Flurry.Analytics.FlurryAgent;
 using NativeGender = Flurry.Analytics.Gender;
-using NativeParameterCollection = MonoTouch.Foundation.NSDictionary;
 #endif
 
 namespace Flurry.Analytics.Portable
@@ -93,8 +98,6 @@ namespace Flurry.Analytics.Portable
 		{
 			ApiKey = apiKey;
 
-			CheckStartSessionParameters();
-
 			NativeFlurry.StartSession(ApiKey);
 		}
 		/// <summary>
@@ -113,8 +116,6 @@ namespace Flurry.Analytics.Portable
 		/// </exception>
 		public static void StartSession()
 		{
-			CheckStartSessionParameters();
-
 			NativeFlurry.StartSession(ApiKey);
 		}
 		/// <summary>
@@ -139,8 +140,6 @@ namespace Flurry.Analytics.Portable
 		{
 			ApiKey = apiKey;
 
-			CheckStartSessionParameters();
-
 			NativeFlurry.StartSession(ApiKey);
 		}
 		/// <summary>
@@ -159,16 +158,12 @@ namespace Flurry.Analytics.Portable
 		/// </exception>
 		public static void StartSession()
 		{
-			CheckStartSessionParameters();
-
 			NativeFlurry.StartSession(ApiKey);
 		}
 #elif __ANDROID__
 		/// <summary>
-		/// This method serves as the entry point to Flurry Analytics collection.
-		/// The session will continue for the period the app is in the foreground until your app is backgrounded for the
-		/// time specified in <see cref="SetSessionContinueTimeout"/>. If the app is resumed in that period the session 
-		/// will continue, otherwise a new session will begin.
+		/// This method initializes Flurry Analytics.
+		/// On Android 4.0 and above, this will automatically register to track sessions.
 		/// </summary>
 		/// <param name="context">
 		/// A reference to a <see cref="Android.Content.Context"/> object such as an <see cref="Android.App.Activity"/> 
@@ -178,13 +173,23 @@ namespace Flurry.Analytics.Portable
 		/// The Flurry Analytics application API key to use. This parameter will update the <see cref="ApiKey"/> 
 		/// property.
 		/// </param>
-		public static void StartSession(Context context, string apiKey)
+		public static void Init(Context context, string apiKey)
 		{
 			ApiKey = apiKey;
 
-			CheckStartSessionParameters();
-
-			NativeFlurry.OnStartSession(context, ApiKey);
+			NativeFlurry.Init(context, ApiKey);
+		}
+		/// <summary>
+		/// This method initializes Flurry Analytics.
+		/// On Android 4.0 and above, this will automatically register to track sessions.
+		/// </summary>
+		/// <param name="context">
+		/// A reference to a <see cref="Android.Content.Context"/> object such as an <see cref="Android.App.Activity"/> 
+		/// or an <see cref="Android.App.Activity"/>.
+		/// </param>
+		public static void Init(Context context)
+		{
+			NativeFlurry.Init(context, ApiKey);
 		}
 		/// <summary>
 		/// This method serves as the entry point to Flurry Analytics collection.
@@ -203,7 +208,7 @@ namespace Flurry.Analytics.Portable
 		/// <remarks>
 		/// The session implementation for the Android SDK is implemented as a stack. It is important to match any call 
 		/// to <see cref="StartSession"/> in the Android <see cref="Android.App.Activity.OnStart"/> method with a call 
-		/// to <see cref="EndSession"/> in the Android <see cref="Android.App.Activity.OnEnd"/> method.
+		/// to <see cref="EndSession"/> in the Android <see cref="Android.App.Activity.OnStop"/> method.
 		/// </remarks>
 		/// <exception cref="ArgumentException">
 		/// This method requires that the <see cref="ApiKey"/> property has been set prior to calling this method. If 
@@ -211,9 +216,7 @@ namespace Flurry.Analytics.Portable
 		/// </exception>
 		public static void StartSession(Context context)
 		{
-			CheckStartSessionParameters();
-
-			NativeFlurry.OnStartSession(context, ApiKey);
+			NativeFlurry.OnStartSession(context);
 		}
 		/// <summary>
 		/// End a Flurry Analytics session.
@@ -245,13 +248,25 @@ namespace Flurry.Analytics.Portable
 #endif
 		}
 
-		public static void SetUserId(string version)
+		/// <summary>
+		/// Assigns the unique ID for a user in the app.
+		/// </summary>
+		/// <param name="userid">The unique user ID.</param>
+		/// <remarks>
+		/// Private or confidential information about the user should not be used.
+		/// </remarks>
+		public static void SetUserId(string userid)
 		{
 #if WINDOWS_PHONE || __ANDROID__ || __IOS__
-			NativeFlurry.SetUserId(version);
+			NativeFlurry.SetUserId(userid);
 #endif
 		}
 
+		/// <summary>
+		/// Specifies the timeout for expiring a Flurry session. 
+		/// The default value is 10 seconds.
+		/// </summary>
+		/// <param name="seconds">The timeout in seconds.</param>
 		public static void SetSessionContinueTimeout(int seconds)
 		{
 #if WINDOWS_PHONE
@@ -263,17 +278,12 @@ namespace Flurry.Analytics.Portable
 #endif
 		}
 
-		public static void EnableSecureTransport()
-		{
-#if WINDOWS_PHONE
-			NativeFlurry.SetSecureTransportEnabled();
-#elif __ANDROID__
-			NativeFlurry.UseHttps = true;
-#elif __IOS__
-			NativeFlurry.SetSecureTransportEnabled(true);
-#endif
-		}
-
+		/// <summary>
+		/// Specifies the location of the session
+		/// </summary>
+		/// <param name="latitude">The latitude coordinate.</param>
+		/// <param name="longitude">The longitude coordinate.</param>
+		/// <param name="accuracy">The location accuracy.</param>
 		public static void SetLocation(float latitude, float longitude, float accuracy)
 		{
 #if WINDOWS_PHONE
@@ -285,6 +295,10 @@ namespace Flurry.Analytics.Portable
 #endif
 		}
 
+		/// <summary>
+		/// Specifies the age of the user.
+		/// </summary>
+		/// <param name="age">The user's age.</param>
 		public static void SetAge(int age)
 		{
 #if WINDOWS_PHONE || __ANDROID__ || __IOS__
@@ -292,6 +306,10 @@ namespace Flurry.Analytics.Portable
 #endif
 		}
 
+		/// <summary>
+		/// Specifes the gender of the user.
+		/// </summary>
+		/// <param name="gender">The user's gender.</param>
 		public static void SetGender(Gender gender)
 		{
 #if WINDOWS_PHONE || __ANDROID__ || __IOS__
@@ -299,6 +317,9 @@ namespace Flurry.Analytics.Portable
 #endif
 		}
 
+		/// <summary>
+		/// Explicitly track a page view during a session.
+		/// </summary>
 		public static void LogPageView()
 		{
 #if WINDOWS_PHONE || __IOS__
@@ -308,6 +329,10 @@ namespace Flurry.Analytics.Portable
 #endif
 		}
 
+		/// <summary>
+		/// Record a custom event specified by the event name or ID.
+		/// </summary>
+		/// <param name="eventId">The event name or ID.</param>
 		public static void LogEvent(string eventId)
 		{
 #if WINDOWS_PHONE || __ANDROID__ || __IOS__
@@ -315,6 +340,11 @@ namespace Flurry.Analytics.Portable
 #endif
 		}
 
+		/// <summary>
+		/// Record a custom event specified by the event name or ID, along with parameters.
+		/// </summary>
+		/// <param name="eventId">The event name or ID.</param>
+		/// <param name="parameters">The parameters to associate with the event.</param>
 		public static void LogEvent(string eventId, IDictionary<string, string> parameters)
 		{
 #if WINDOWS_PHONE || __ANDROID__ || __IOS__
@@ -326,6 +356,11 @@ namespace Flurry.Analytics.Portable
 #endif
 		}
 
+		/// <summary>
+		/// Record a custom timed event specified by the event name or ID.
+		/// </summary>
+		/// <param name="eventId">The event name or ID.</param>
+		/// <param name="timed">True if the event is a timed event, or False otherwise.</param>
 		public static void LogEvent(string eventId, bool timed)
 		{
 #if WINDOWS_PHONE || __ANDROID__ || __IOS__
@@ -333,6 +368,12 @@ namespace Flurry.Analytics.Portable
 #endif
 		}
 
+		/// <summary>
+		/// Record a custom timed event specified by the event name or ID, along with parameters.
+		/// </summary>
+		/// <param name="eventId">The event name or ID.</param>
+		/// <param name="parameters">The parameters to associate with the event.</param>
+		/// <param name="timed">True if the event is a timed event, or False otherwise.</param>
 		public static void LogEvent(string eventId, IDictionary<string, string> parameters, bool timed)
 		{
 #if WINDOWS_PHONE || __ANDROID__ || __IOS__
@@ -344,24 +385,46 @@ namespace Flurry.Analytics.Portable
 #endif
 		}
 
+		/// <summary>
+		/// Record a custom timed event specified by the event name or ID.
+		/// </summary>
+		/// <param name="eventId">The event name or ID.</param>
+		/// <returns>A <see cref="TimedEvent"/> that, when disposed, ends the timed event.</returns>
 		public static TimedEvent LogTimedEvent(string eventId)
 		{
 			LogEvent(eventId, true);
 			return new TimedEvent(eventId);
 		}
 
+		/// <summary>
+		/// Record a custom timed event specified by the event name or ID, along with parameters.
+		/// </summary>
+		/// <param name="eventId">The event name or ID.</param>
+		/// <param name="parameters">The parameters to associate with the event.</param>
+		/// <returns>A <see cref="TimedEvent"/> that, when disposed, ends the timed event.</returns>
 		public static TimedEvent LogTimedEvent(string eventId, IDictionary<string, string> parameters)
 		{
 			LogEvent(eventId, parameters, true);
 			return new TimedEvent(eventId);
 		}
 
+		/// <summary>
+		/// Record a custom timed event specified by the event name or ID, along with parameters.
+		/// </summary>
+		/// <param name="eventId">The event name or ID.</param>
+		/// <param name="startParameters">The parameters to associate with the event.</param>
+		/// <param name="endParameters">The parameters to update the event with.</param>
+		/// <returns>A <see cref="TimedEvent"/> that, when disposed, ends the timed event.</returns>
 		public static TimedEvent LogTimedEvent(string eventId, IDictionary<string, string> startParameters, IDictionary<string, string> endParameters)
 		{
 			LogEvent(eventId, startParameters, true);
 			return new TimedEvent(eventId, endParameters);
 		}
 
+		/// <summary>
+		/// Ends a timed event specified by the event name or ID.
+		/// </summary>
+		/// <param name="eventId">The event name or ID.</param>
 		public static void EndTimedEvent(string eventId)
 		{
 #if WINDOWS_PHONE || __ANDROID__ || __IOS__
@@ -369,6 +432,11 @@ namespace Flurry.Analytics.Portable
 #endif
 		}
 
+		/// <summary>
+		/// Ends a timed event specified by the event name or ID, along with parameters.
+		/// </summary>
+		/// <param name="eventId">The event name or ID.</param>
+		/// <param name="parameters">The parameters to update the event with.</param>
 		public static void EndTimedEvent(string eventId, IDictionary<string, string> parameters)
 		{
 #if WINDOWS_PHONE || __ANDROID__ || __IOS__
@@ -380,11 +448,20 @@ namespace Flurry.Analytics.Portable
 #endif
 		}
 
+		/// <summary>
+		/// Record an application exception.
+		/// </summary>
+		/// <param name="exception">The exception to record.</param>
 		public static void LogError(System.Exception exception)
 		{
 			LogError(exception.Message, exception);
 		}
 
+		/// <summary>
+		/// Record an application exception, along with a message.
+		/// </summary>
+		/// <param name="message">The message to record along with the exception.</param>
+		/// <param name="exception">The exception to record.</param>
 		public static void LogError(string message, System.Exception exception)
 		{
 #if __IOS__
@@ -428,16 +505,6 @@ namespace Flurry.Analytics.Portable
 				parameters.Values.Cast<object>().ToArray(), 
 				parameters.Keys.Cast<object>().ToArray());
 #endif
-		}
-
-		private static void CheckStartSessionParameters()
-		{
-			if (string.IsNullOrEmpty(ApiKey))
-			{
-				throw new ArgumentException (
-					"An API key must be specified. Either use the overload that takes an API key, or first set the " +
-					"ApiKey property prior to calling the StartSession method.");
-			}
 		}
 #endif
 	}

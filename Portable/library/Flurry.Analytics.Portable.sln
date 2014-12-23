@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
+# Visual Studio 2012
 VisualStudioVersion = 12.0.30723.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Flurry.Analytics.Portable", "Flurry.Analytics.Portable\Flurry.Analytics.Portable.csproj", "{4FFED8D8-634A-4569-B8DC-8771EC93790E}"
@@ -15,41 +15,47 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Flurry.Analytics.Portable.P
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Flurry.Analytics.Portable.WindowsPhone7", "Flurry.Analytics.Portable.WindowsPhone7\Flurry.Analytics.Portable.WindowsPhone7.csproj", "{1A9A5863-B3B2-4DC6-98A1-A3148D85A8A5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Flurry.Analytics.Portable.iOS-unified", "Flurry.Analytics.Portable.iOS-unified\Flurry.Analytics.Portable.iOS-unified.csproj", "{A97C4036-8868-476A-A6DE-412018BA1667}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{4FFED8D8-634A-4569-B8DC-8771EC93790E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{4FFED8D8-634A-4569-B8DC-8771EC93790E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{4FFED8D8-634A-4569-B8DC-8771EC93790E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{4FFED8D8-634A-4569-B8DC-8771EC93790E}.Release|Any CPU.Build.0 = Release|Any CPU
-		{9299037E-E0AB-4B1A-A58E-262BDD04EED4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9299037E-E0AB-4B1A-A58E-262BDD04EED4}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9299037E-E0AB-4B1A-A58E-262BDD04EED4}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9299037E-E0AB-4B1A-A58E-262BDD04EED4}.Release|Any CPU.Build.0 = Release|Any CPU
-		{3DC22A66-0C33-4869-8A6A-D0F6D58D1AEB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{3DC22A66-0C33-4869-8A6A-D0F6D58D1AEB}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{3DC22A66-0C33-4869-8A6A-D0F6D58D1AEB}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{3DC22A66-0C33-4869-8A6A-D0F6D58D1AEB}.Release|Any CPU.Build.0 = Release|Any CPU
-		{7210B4CF-492C-4B6A-8968-3485C6D8EFF7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{7210B4CF-492C-4B6A-8968-3485C6D8EFF7}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{7210B4CF-492C-4B6A-8968-3485C6D8EFF7}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{7210B4CF-492C-4B6A-8968-3485C6D8EFF7}.Release|Any CPU.Build.0 = Release|Any CPU
-		{4FFED8D8-634A-4569-B8DC-8771EC93790F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{4FFED8D8-634A-4569-B8DC-8771EC93790F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{4FFED8D8-634A-4569-B8DC-8771EC93790F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{4FFED8D8-634A-4569-B8DC-8771EC93790F}.Release|Any CPU.Build.0 = Release|Any CPU
 		{1A9A5863-B3B2-4DC6-98A1-A3148D85A8A5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{1A9A5863-B3B2-4DC6-98A1-A3148D85A8A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1A9A5863-B3B2-4DC6-98A1-A3148D85A8A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1A9A5863-B3B2-4DC6-98A1-A3148D85A8A5}.Release|Any CPU.Build.0 = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
+		{3DC22A66-0C33-4869-8A6A-D0F6D58D1AEB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3DC22A66-0C33-4869-8A6A-D0F6D58D1AEB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3DC22A66-0C33-4869-8A6A-D0F6D58D1AEB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3DC22A66-0C33-4869-8A6A-D0F6D58D1AEB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4FFED8D8-634A-4569-B8DC-8771EC93790E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4FFED8D8-634A-4569-B8DC-8771EC93790E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4FFED8D8-634A-4569-B8DC-8771EC93790E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4FFED8D8-634A-4569-B8DC-8771EC93790E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4FFED8D8-634A-4569-B8DC-8771EC93790F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4FFED8D8-634A-4569-B8DC-8771EC93790F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4FFED8D8-634A-4569-B8DC-8771EC93790F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4FFED8D8-634A-4569-B8DC-8771EC93790F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7210B4CF-492C-4B6A-8968-3485C6D8EFF7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7210B4CF-492C-4B6A-8968-3485C6D8EFF7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7210B4CF-492C-4B6A-8968-3485C6D8EFF7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7210B4CF-492C-4B6A-8968-3485C6D8EFF7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9299037E-E0AB-4B1A-A58E-262BDD04EED4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9299037E-E0AB-4B1A-A58E-262BDD04EED4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9299037E-E0AB-4B1A-A58E-262BDD04EED4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9299037E-E0AB-4B1A-A58E-262BDD04EED4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A97C4036-8868-476A-A6DE-412018BA1667}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A97C4036-8868-476A-A6DE-412018BA1667}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A97C4036-8868-476A-A6DE-412018BA1667}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A97C4036-8868-476A-A6DE-412018BA1667}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(MonoDevelopProperties) = preSolution
 		StartupItem = Flurry.Analytics.Portable\Flurry.Analytics.Portable.csproj
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
 	EndGlobalSection
 EndGlobal
