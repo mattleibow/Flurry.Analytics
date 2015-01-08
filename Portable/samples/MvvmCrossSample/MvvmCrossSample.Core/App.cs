@@ -23,13 +23,12 @@ namespace MvvmCrossSample.Core
 
 			this.SetUpAnalytics();
 
-			//// Start the app with the First View Model.
+			// Start the app with the First View Model.
 			this.RegisterAppStart<MainViewModel>();
 		}
 
 		private void SetUpAnalytics()
 		{
-			AnalyticsApi.EnableSecureTransport();
 			AnalyticsApi.SetAppVersion("2.0.0.0");
 			AnalyticsApi.SetSessionContinueTimeout(30);
 		}
