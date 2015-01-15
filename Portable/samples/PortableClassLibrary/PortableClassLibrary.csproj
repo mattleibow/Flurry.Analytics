@@ -40,7 +40,7 @@
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Flurry.Analytics.Portable">
-      <HintPath>..\packages\Flurry.Analytics.Portable.1.1.0-beta1\lib\portable-net4+sl4+wp7+win8\Flurry.Analytics.Portable.dll</HintPath>
+      <HintPath>..\packages\Flurry.Analytics.Portable.1.1.1\lib\portable-net4+sl4+wp7+win8\Flurry.Analytics.Portable.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Threading.Tasks">
       <HintPath>..\packages\Microsoft.Bcl.Async.1.0.168\lib\portable-net40+sl4+win8+wp71+wpa81\Microsoft.Threading.Tasks.dll</HintPath>

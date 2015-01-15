@@ -36,18 +36,18 @@
     <AndroidUseSharedRuntime>False</AndroidUseSharedRuntime>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Flurry.Analytics.Android">
+      <HintPath>..\..\packages\Flurry.Analytics.1.1.1\lib\MonoAndroid23\Flurry.Analytics.Android.dll</HintPath>
+    </Reference>
+    <Reference Include="Flurry.Analytics.Portable">
+      <HintPath>..\..\packages\Flurry.Analytics.Portable.1.1.1\lib\MonoAndroid23\Flurry.Analytics.Portable.dll</HintPath>
+    </Reference>
     <Reference Include="Mono.Android" />
     <Reference Include="mscorlib" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Xml" />
-    <Reference Include="Flurry.Analytics.Android">
-      <HintPath>..\..\packages\Flurry.Analytics.1.1.0-beta1\lib\MonoAndroid23\Flurry.Analytics.Android.dll</HintPath>
-    </Reference>
-    <Reference Include="Flurry.Analytics.Portable">
-      <HintPath>..\..\packages\Flurry.Analytics.Portable.1.1.0-beta1\lib\MonoAndroid23\Flurry.Analytics.Portable.dll</HintPath>
-    </Reference>
     <Reference Include="Cirrious.CrossCore.Droid">
       <HintPath>..\..\packages\MvvmCross.HotTuna.CrossCore.3.5.0-beta2\lib\MonoAndroid\Cirrious.CrossCore.Droid.dll</HintPath>
     </Reference>

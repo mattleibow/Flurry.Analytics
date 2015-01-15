@@ -20,6 +20,7 @@ namespace MvvmCrossSample.Droid
 			AnalyticsApi.ApiKey = "36TWHT3RMTBTF2G46KGH";
 
 			// Starting and ending the sessions specifically for Android is found in the BaseView
+            AnalyticsApi.Init(applicationContext);
 		}
 
 		protected override IMvxApplication CreateApp()

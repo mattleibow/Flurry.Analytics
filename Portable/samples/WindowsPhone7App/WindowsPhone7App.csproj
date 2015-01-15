@@ -46,13 +46,11 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Flurry.Analytics.Portable, Version=1.0.3.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\Flurry.Analytics.Portable.1.1.0-beta1\lib\wp71\Flurry.Analytics.Portable.dll</HintPath>
+    <Reference Include="Flurry.Analytics.Portable">
+      <HintPath>..\packages\Flurry.Analytics.Portable.1.1.1\lib\wp71\Flurry.Analytics.Portable.dll</HintPath>
     </Reference>
-    <Reference Include="FlurryWP8SDK, Version=3.1.2.0, Culture=neutral, PublicKeyToken=d822942b4ec01210, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\Flurry.Analytics.1.1.0-beta1\lib\sl4-wp71\FlurryWP8SDK.dll</HintPath>
+    <Reference Include="FlurryWP8SDK">
+      <HintPath>..\packages\Flurry.Analytics.1.1.1\lib\sl4-wp71\FlurryWP8SDK.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Phone" />
     <Reference Include="Microsoft.Phone.Interop" />

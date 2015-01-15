@@ -101,6 +101,14 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Reference Include="Flurry.Analytics.iOS, Version=6.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\packages\Flurry.Analytics.1.1.1\lib\MonoTouch10\Flurry.Analytics.iOS.dll</HintPath>
+    </Reference>
+    <Reference Include="Flurry.Analytics.Portable, Version=1.0.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\packages\Flurry.Analytics.Portable.1.1.1\lib\MonoTouch10\Flurry.Analytics.Portable.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Net" />
     <Reference Include="System.Windows" />
@@ -141,12 +149,6 @@
     </Reference>
     <Reference Include="CrossUI.Touch">
       <HintPath>..\..\packages\MvvmCross.HotTuna.Touch.Dialog.3.2.2\lib\MonoTouch\CrossUI.Touch.dll</HintPath>
-    </Reference>
-    <Reference Include="Flurry.Analytics.iOS">
-      <HintPath>..\..\packages\Flurry.Analytics.1.1.0-beta1\lib\MonoTouch10\Flurry.Analytics.iOS.dll</HintPath>
-    </Reference>
-    <Reference Include="Flurry.Analytics.Portable">
-      <HintPath>..\..\packages\Flurry.Analytics.Portable.1.1.0-beta1\lib\MonoTouch10\Flurry.Analytics.Portable.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup />

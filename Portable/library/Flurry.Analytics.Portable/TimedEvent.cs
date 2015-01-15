@@ -18,10 +18,10 @@ namespace Flurry.Analytics.Portable
 		internal TimedEvent(string eventId, IDictionary<string, string> parameters)
 		{
 			EventId = eventId;
-            if (parameters != null)
-            {
-                Parameters = new Dictionary<String, string>(parameters);
-            }
+			if (parameters != null)
+			{
+				Parameters = new Dictionary<String, string>(parameters);
+			}
 		}
 
 		/// <summary>
@@ -53,8 +53,6 @@ namespace Flurry.Analytics.Portable
 		/// <param name="parameters">The parameters associated with the event.</param>
 		public void EndEvent(IDictionary<string, string> parameters)
 		{
-			AnalyticsApi.LogEvent("ËNDING EVENT" + EventId);
-
 			if (parameters == null)
 				AnalyticsApi.EndTimedEvent(EventId);
 			else

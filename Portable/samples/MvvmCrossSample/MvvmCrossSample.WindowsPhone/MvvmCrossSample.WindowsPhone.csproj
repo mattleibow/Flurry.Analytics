@@ -184,13 +184,11 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\packages\MvvmCross.HotTuna.MvvmCrossLibraries.3.5.0-beta2\lib\wp8\Cirrious.MvvmCross.WindowsPhone.dll</HintPath>
     </Reference>
-    <Reference Include="Flurry.Analytics.Portable, Version=1.0.3.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\packages\Flurry.Analytics.Portable.1.1.0-beta1\lib\wp8\Flurry.Analytics.Portable.dll</HintPath>
+    <Reference Include="Flurry.Analytics.Portable">
+      <HintPath>..\..\packages\Flurry.Analytics.Portable.1.1.1\lib\wp8\Flurry.Analytics.Portable.dll</HintPath>
     </Reference>
-    <Reference Include="FlurryWP8SDK, Version=3.1.1.0, Culture=neutral, PublicKeyToken=d822942b4ec01210, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\packages\Flurry.Analytics.1.1.0-beta1\lib\wp8\FlurryWP8SDK.dll</HintPath>
+    <Reference Include="FlurryWP8SDK">
+      <HintPath>..\..\packages\Flurry.Analytics.1.1.1\lib\wp8\FlurryWP8SDK.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Phone.Controls.Toolkit">
       <HintPath>..\..\packages\WPtoolkit.4.2013.08.16\lib\wp8\Microsoft.Phone.Controls.Toolkit.dll</HintPath>
