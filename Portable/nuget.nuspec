@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
     <metadata>
         <id>Flurry.Analytics.Portable</id>
-        <version>1.1.1</version>
+        <version>1.1.1.2</version>
         <title>Flurry Analytics Portable</title>
         <authors>Matthew Leibowitz</authors>
         <licenseUrl>https://github.com/mattleibow/Flurry.Analytics/blob/master/FlurryAnalytics/component/License.md</licenseUrl>
@@ -14,19 +14,19 @@
         <tags>flurry,analytics,xamarin,ios,windows phone,android,mobile</tags>
         <dependencies>
             <group targetFramework="WindowsPhone7.1">
-                <dependency id="Flurry.Analytics" version="1.1.1" />
+                <dependency id="Flurry.Analytics" version="1.1.1.2" />
             </group>
             <group targetFramework="WindowsPhone8.0">
-                <dependency id="Flurry.Analytics" version="1.1.1" />
+                <dependency id="Flurry.Analytics" version="1.1.1.2" />
             </group>
             <group targetFramework="MonoTouch1.0">
-                <dependency id="Flurry.Analytics" version="1.1.1" />
+                <dependency id="Flurry.Analytics" version="1.1.1.2" />
             </group>
             <group targetFramework="XamariniOS1.0">
-                <dependency id="Flurry.Analytics" version="1.1.1" />
+                <dependency id="Flurry.Analytics" version="1.1.1.2" />
             </group>
             <group targetFramework="MonoAndroid1.0">
-                <dependency id="Flurry.Analytics" version="1.1.1" />
+                <dependency id="Flurry.Analytics" version="1.1.1.2" />
             </group>
         </dependencies>
     </metadata>
