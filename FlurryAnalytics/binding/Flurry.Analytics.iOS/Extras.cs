@@ -31,5 +31,29 @@ namespace Flurry.Analytics {
 			}
 		}
 	}
+
+	public class FlurryAgentEventsDelegate : NSObject, IFlurryAgentDelegate
+	{
+		public EventHandler<SessionCreatedEventArgs> SessionCreated;
+		
+		public virtual void OnSessionCreated (NSDictionary info)
+		{
+			var handler = SessionCreated;
+			if (handler != null)
+			{
+				handler (this, new SessionCreatedEventArgs (info));
+			}
+		}
+	}
+
+	public class SessionCreatedEventArgs : EventArgs
+	{
+		public SessionCreatedEventArgs (NSDictionary info)
+		{
+			Info = info;
+		}
+
+		public NSDictionary Info { get; private set; }
+	}
 }
 

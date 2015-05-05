@@ -1,21 +1,28 @@
 using System;
 
-#if __UNIFIED__
 using Foundation;
-#else
-using MonoTouch.Foundation;
-#endif
 
 namespace Flurry.Analytics {
 
+	[Protocol, Model]
+	[BaseType (typeof(NSObject), Name = "FlurryDelegate")]
+	public partial interface FlurryAgentDelegate
+	{
+		[Abstract, Export ("flurrySessionDidCreateWithInfo:")]
+		void OnSessionCreated (NSDictionary info);
+	}
+
 	[BaseType (typeof (NSObject), Name="Flurry")]
 	public partial interface FlurryAgent {
+
+		[Static, Export ("setDelegate:")]
+		void SetDelegate (FlurryAgentDelegate del);
 
 		[Static, Export ("setAppVersion:")]
 		void SetAppVersion (string version);
 
 		[Static, Export ("getFlurryAgentVersion")]
-		string GetFlurryAgentVersion ();
+		string FlurryAgentVersion { get; }
 
 		[Static, Export ("setShowErrorInLogEnabled:")]
 		void SetShowErrorInLogEnabled (bool value);
@@ -42,7 +49,10 @@ namespace Flurry.Analytics {
 		void StartSession (string apiKey, NSObject options);
 
 		[Static, Export ("activeSessionExists")]
-		bool ActiveSessionExists ();
+		bool ActiveSessionExists { get; }
+
+		[Static, Export("getSessionID")]
+		bool SessionId { get; }
 
 		[Static, Export ("pauseBackgroundSession")]
 		void PauseBackgroundSession ();
@@ -110,5 +120,8 @@ namespace Flurry.Analytics {
 
 		[Static, Export ("setEventLoggingEnabled:")]
 		void SetEventLoggingEnabled (bool enabled);
+
+		[Static, Export("setPulseEnabled:")]
+		void SetPulseEnabled (bool enabled);
 	}
 }
