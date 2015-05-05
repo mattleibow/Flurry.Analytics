@@ -55,13 +55,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="FlurryWP8SDK, Version=3.1.1.0, Culture=neutral, PublicKeyToken=d822942b4ec01210, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\Flurry.Analytics.1.1.0-beta1\lib\wp8\FlurryWP8SDK.dll</HintPath>
+    <Reference Include="FlurryWP8SDK">
+      <HintPath>..\..\..\FlurryAnalytics\binding\Flurry.Analytics.WP8\FlurryWP8SDK.dll</HintPath>
     </Reference>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\$(TargetFrameworkIdentifier)\$(TargetFrameworkVersion)\Microsoft.$(TargetFrameworkIdentifier).$(TargetFrameworkVersion).Overrides.targets" />
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\$(TargetFrameworkIdentifier)\$(TargetFrameworkVersion)\Microsoft.$(TargetFrameworkIdentifier).CSharp.targets" />

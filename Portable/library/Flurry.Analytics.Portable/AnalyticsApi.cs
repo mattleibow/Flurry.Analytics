@@ -16,13 +16,8 @@ using NativeFlurry = Flurry.Analytics.FlurryAgent;
 using NativeGender = Flurry.Analytics.Gender;
 using NativeParameterCollection = System.Collections.Generic.IDictionary<System.String, System.String>;
 #elif __IOS__
-#if __UNIFIED__
 using Foundation;
 using NativeParameterCollection = Foundation.NSDictionary;
-#else
-using MonoTouch.Foundation;
-using NativeParameterCollection = MonoTouch.Foundation.NSDictionary;
-#endif
 using NativeFlurry = Flurry.Analytics.FlurryAgent;
 using NativeGender = Flurry.Analytics.Gender;
 #endif

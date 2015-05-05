@@ -41,9 +41,6 @@
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
     <Reference Include="Mono.Android" />
-    <Reference Include="Flurry.Analytics.Android">
-      <HintPath>..\packages\Flurry.Analytics.1.1.0-beta1\lib\MonoAndroid23\Flurry.Analytics.Android.dll</HintPath>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="..\Flurry.Analytics.Portable\AnalyticsApi.cs">
@@ -60,7 +57,10 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="packages.config" />
+    <ProjectReference Include="..\..\..\FlurryAnalytics\binding\Flurry.Analytics.Android\Flurry.Analytics.Android.csproj">
+      <Project>{537319ca-4cd0-4271-a3b3-157e41b877b3}</Project>
+      <Name>Flurry.Analytics.Android</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>
