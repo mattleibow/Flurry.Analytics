@@ -27,9 +27,16 @@
 	<key>UISupportedInterfaceOrientations~ipad</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
-		<string>UIInterfaceOrientationPortraitUpsideDown</string>
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
+	</array>
+	<key>CFBundleIdentifier</key>
+	<string></string>
+	<key>CFBundleShortVersionString</key>
+	<string></string>
+	<key>CFBundleIconFiles</key>
+	<array>
+		<string>Default-568h@2x.png</string>
 	</array>
 </dict>
 </plist>

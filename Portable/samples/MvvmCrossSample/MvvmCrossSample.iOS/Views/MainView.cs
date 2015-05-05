@@ -1,8 +1,8 @@
 using Cirrious.MvvmCross.Binding.BindingContext;
 using Cirrious.MvvmCross.Dialog.Touch.Elements;
 using CrossUI.Touch.Dialog.Elements;
-using MonoTouch.Foundation;
-using MonoTouch.UIKit;
+using Foundation;
+using UIKit;
 
 namespace MvvmCrossSample.iOS.Views
 {

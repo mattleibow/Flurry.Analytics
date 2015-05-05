@@ -1,5 +1,5 @@
 ﻿using Cirrious.MvvmCross.Dialog.Touch;
-using MonoTouch.UIKit;
+using UIKit;
 
 namespace MvvmCrossSample.iOS.Views
 {

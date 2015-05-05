@@ -2,7 +2,8 @@
 using System.Collections.Specialized;
 using System.Windows.Input;
 
-using MonoTouch.UIKit;
+using UIKit;
+using Foundation;
 
 namespace MvvmCrossSample.iOS
 {
@@ -45,7 +46,7 @@ namespace MvvmCrossSample.iOS
 		public void Include(UIDatePicker uiDatePicker)
 		{
 			uiDatePicker.Date = uiDatePicker.Date.AddSeconds(1);
-			uiDatePicker.ValueChanged += (sender, args) => { uiDatePicker.Date = DateTime.MaxValue; };
+			uiDatePicker.ValueChanged += (sender, args) => { uiDatePicker.Date = NSDate.Now; };
 		}
 
 		public void Include(UISlider uiSlider)
