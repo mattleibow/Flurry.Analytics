@@ -16,5 +16,19 @@ namespace Flurry.Analytics
 		Female = 0,
 		Unknown = -1
 	}
+	
+	public class FlurryAgentEventsListener : Java.Lang.Object, IFlurryAgentListener
+	{
+		public event EventHandler SessionStarted;
+
+		public void OnSessionStarted()
+		{
+			var handler = SessionStarted;
+			if (handler != null)
+			{
+				handler(this, EventArgs.Empty);
+			}
+		}
+	}
 }
 

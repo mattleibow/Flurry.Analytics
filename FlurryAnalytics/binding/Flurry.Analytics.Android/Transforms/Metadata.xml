@@ -4,8 +4,6 @@
   <remove-node path="/api/package[starts-with(@name, 'com.flurry.sdk')]" />
 
   <remove-node path="/api/package[@name='com.flurry.android']/class[@name='InstallReceiver']" />
-  <remove-node path="/api/package[@name='com.flurry.android']/class[@name='PurchaseState']" />
-  <remove-node path="/api/package[@name='com.flurry.android']/class[@name='PurchaseType']" />
   <remove-node path="/api/package[@name='com.flurry.android']/interface[@name='Constants']" />
 
   <!-- use C# namespaces -->
@@ -14,6 +12,7 @@
   <attr path="/api/package[@name='com.flurry.android']/class[@name='FlurryEventRecordStatus']" name="managedName">FlurryEventStatus</attr>
 
   <!-- rename fields -->
+  <attr path="/api/package[@name='com.flurry.android']/class[@name='FlurryAgent']/method[@name='setFlurryAgentListener']" name="eventName" />
   <attr path="/api/package[@name='com.flurry.android']/class[@name='FlurryEventRecordStatus']/field[@name='kFlurryEventFailed']" name="managedName">Failed</attr>
   <attr path="/api/package[@name='com.flurry.android']/class[@name='FlurryEventRecordStatus']/field[@name='kFlurryEventLogCountExceeded']" name="managedName">LogCountExceeded</attr>
   <attr path="/api/package[@name='com.flurry.android']/class[@name='FlurryEventRecordStatus']/field[@name='kFlurryEventLoggingDelayed']" name="managedName">LoggingDelayed</attr>
