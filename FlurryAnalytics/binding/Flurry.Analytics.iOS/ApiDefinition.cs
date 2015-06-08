@@ -124,4 +124,20 @@ namespace Flurry.Analytics {
 		[Static, Export("setPulseEnabled:")]
 		void SetPulseEnabled (bool enabled);
 	}
+
+	[BaseType (typeof (NSObject), Name="FlurryWatch")]
+	public partial interface FlurryWatchAgent {
+
+		[Static, Export ("logWatchEvent:")]
+		void LogWatchEvent (string eventName);
+
+		[Static, Export ("logWatchEvent:withParameters:")]
+		FlurryEventStatus LogWatchEvent (string eventName, NSDictionary parameters);
+
+		[Static, Export ("logWatchError:message:exception:")]
+		void LogWatchError (string errorID, string message, NSException exception);
+
+		[Static, Export ("logWatchError:message:error:")]
+		void LogWatchError (string errorID, string message, NSError error);
+	}
 }

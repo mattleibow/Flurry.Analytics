@@ -80,30 +80,21 @@
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <ItemGroup>
-    <Compile Include="..\Flurry.Analytics.iOS.Sample\AppDelegate.cs">
-      <Link>AppDelegate.cs</Link>
-    </Compile>
-    <Compile Include="..\Flurry.Analytics.iOS.Sample\Main.cs">
-      <Link>Main.cs</Link>
-    </Compile>
-    <Compile Include="..\Flurry.Analytics.iOS.Sample\SampleViewController.cs">
-      <Link>SampleViewController.cs</Link>
-    </Compile>
-    <Compile Include="..\Flurry.Analytics.iOS.Sample\SampleViewController.designer.cs">
+    <Compile Include="AppDelegate.cs" />
+    <Compile Include="Main.cs" />
+    <Compile Include="SampleViewController.cs" />
+    <Compile Include="SampleViewController.designer.cs">
       <DependentUpon>SampleViewController.cs</DependentUpon>
-      <Link>SampleViewController.designer.cs</Link>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <InterfaceDefinition Include="..\Flurry.Analytics.iOS.Sample\MainStoryboard.storyboard">
-      <Link>MainStoryboard.storyboard</Link>
-    </InterfaceDefinition>
+    <InterfaceDefinition Include="MainStoryboard.storyboard" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\binding\Flurry.Analytics.iOS-unified\Flurry.Analytics.iOS-unified.csproj">
+    <ProjectReference Include="..\..\binding\Flurry.Analytics.iOS\Flurry.Analytics.iOS.csproj">
       <Project>{3817227C-4052-458B-9D6E-F0A747E81D2A}</Project>
       <Name>Flurry.Analytics.iOS-unified</Name>
     </ProjectReference>

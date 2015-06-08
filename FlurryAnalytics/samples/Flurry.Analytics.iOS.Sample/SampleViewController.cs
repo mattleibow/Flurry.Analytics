@@ -34,7 +34,7 @@ namespace Flurry.Analytics.iOS.Sample
 		{
 			base.ViewDidLoad ();
 
-			VersionLabel.Text = FlurryAgent.GetFlurryAgentVersion ();
+			VersionLabel.Text = FlurryAgent.FlurryAgentVersion;
 
 			LogEventButton.TouchUpInside += delegate {
 				if (string.IsNullOrEmpty (EventParameterText.Text))

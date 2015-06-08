@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Flurry.Analytics.iOS-unified", "..\..\binding\Flurry.Analytics.iOS-unified\Flurry.Analytics.iOS-unified.csproj", "{3817227C-4052-458B-9D6E-F0A747E81D2A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Flurry.Analytics.iOS", "..\..\binding\Flurry.Analytics.iOS\Flurry.Analytics.iOS.csproj", "{3817227C-4052-458B-9D6E-F0A747E81D2A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Flurry.Analytics.iOS.Sample-unified", "Flurry.Analytics.iOS.Sample-unified.csproj", "{FED39372-1E87-448D-9061-2D8837321153}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Flurry.Analytics.iOS.Sample", "Flurry.Analytics.iOS.Sample.csproj", "{FED39372-1E87-448D-9061-2D8837321153}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -31,6 +31,6 @@ Global
 		{FED39372-1E87-448D-9061-2D8837321153}.Release|iPhoneSimulator.Build.0 = Release|iPhoneSimulator
 	EndGlobalSection
 	GlobalSection(MonoDevelopProperties) = preSolution
-		StartupItem = Flurry.Analytics.iOS.Sample-unified.csproj
+		StartupItem = Flurry.Analytics.iOS.Sample.csproj
 	EndGlobalSection
 EndGlobal
