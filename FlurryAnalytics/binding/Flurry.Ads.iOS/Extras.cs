@@ -1,10 +1,8 @@
 ﻿using System;
 
-#if __UNIFIED__
 using Foundation;
-#else
-using MonoTouch.Foundation;
-#endif
+
+using Flurry.Ads.Banner;
 
 namespace Flurry.Ads {
 	

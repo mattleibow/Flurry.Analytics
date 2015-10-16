@@ -393,32 +393,32 @@ namespace Flurry.Ads.Native {
 		bool IsVideoAd { get; }
 	}
 
-	[BaseType (typeof(NSObject), Name = "FlurryAdNativeStyle")]
-	interface FlurryAdNativeStyle
-	{
-		[Static, Field ("STYLE1_SMALL", "__Internal")]
-		int Style1Small { get; }
-
-		[Static, Field ("STYLE1_MEDIUM", "__Internal")]
-		int Style1Medium { get; }
-
-		[Static, Field ("STYLE1_LARGE", "__Internal")]
-		int Style1Large { get; }
-
-		[Static, Field ("STYLE1_XLARGE", "__Internal")]
-		int Style1XLarge { get; }
-
-		[Static, Field ("STYLE2_SMALL", "__Internal")]
-		int Style2Small { get; }
-
-		[Static, Field ("STYLE2_MEDIUM", "__Internal")]
-		int Style2Medium { get; }
-
-
-		[Export ("style")]
-		string Style { get; }
-
-		[Export ("initWithStyle:")]
-		IntPtr Constructor (int styleNum);
-	}
+//	[BaseType (typeof(NSObject), Name = "FlurryAdNativeStyle")]
+//	interface FlurryAdNativeStyle
+//	{
+//		[Static, Field ("STYLE1_SMALL", "__Internal")]
+//		int Style1Small { get; }
+//
+//		[Static, Field ("STYLE1_MEDIUM", "__Internal")]
+//		int Style1Medium { get; }
+//
+//		[Static, Field ("STYLE1_LARGE", "__Internal")]
+//		int Style1Large { get; }
+//
+//		[Static, Field ("STYLE1_XLARGE", "__Internal")]
+//		int Style1XLarge { get; }
+//
+//		[Static, Field ("STYLE2_SMALL", "__Internal")]
+//		int Style2Small { get; }
+//
+//		[Static, Field ("STYLE2_MEDIUM", "__Internal")]
+//		int Style2Medium { get; }
+//
+//
+//		[Export ("style")]
+//		string Style { get; }
+//
+//		[Export ("initWithStyle:")]
+//		IntPtr Constructor (int styleNum);
+//	}
 }
