@@ -15,4 +15,4 @@ using MonoTouch.ObjCRuntime;
 	LinkTarget.Simulator | LinkTarget.Simulator64 | LinkTarget.ArmV7 | LinkTarget.Arm64,
 	ForceLoad = true, 
 	SmartLink = true,
-	Frameworks = "SystemConfiguration Security")]
+	Frameworks = "Foundation SystemConfiguration UIKit Security")]

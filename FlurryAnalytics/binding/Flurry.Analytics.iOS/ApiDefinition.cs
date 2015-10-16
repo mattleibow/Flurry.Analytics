@@ -80,10 +80,10 @@ namespace Flurry.Analytics {
 		void AddOrigin (string originName, string originVersion, NSDictionary parameters);
 
 		[Static, Export ("logEvent:")]
-		FlurryEventStatus LogEvent (string eventName);
+		FlurryEventRecordStatus LogEvent (string eventName);
 
 		[Static, Export ("logEvent:withParameters:")]
-		FlurryEventStatus LogEvent (string eventName, NSDictionary parameters);
+		FlurryEventRecordStatus LogEvent (string eventName, NSDictionary parameters);
 
 		[Static, Export ("logError:message:exception:")]
 		void LogError (string errorID, string message, NSException exception);
@@ -92,10 +92,10 @@ namespace Flurry.Analytics {
 		void LogError (string errorID, string message, NSError error);
 
 		[Static, Export ("logEvent:timed:")]
-		FlurryEventStatus LogEvent (string eventName, bool timed);
+		FlurryEventRecordStatus LogEvent (string eventName, bool timed);
 
 		[Static, Export ("logEvent:withParameters:timed:")]
-		FlurryEventStatus LogEvent (string eventName, NSDictionary parameters, bool timed);
+		FlurryEventRecordStatus LogEvent (string eventName, NSDictionary parameters, bool timed);
 
 		[Static, Export ("endTimedEvent:withParameters:")]
 		void EndTimedEvent (string eventName, [NullAllowed] NSDictionary parameters);
@@ -141,17 +141,17 @@ namespace Flurry.Analytics {
 		void SetPulseEnabled (bool enabled);
 
 		[Static, Export ("logEvent:syndicationID:parameters:")]
-		FlurryEventStatus LogEvent (FlurrySyndicationEvent syndicationEvent, string syndicationID, NSDictionary parameters);
+		FlurryEventRecordStatus LogEvent (FlurrySyndicationEvent syndicationEvent, string syndicationID, NSDictionary parameters);
 	}
 
 	[BaseType (typeof (NSObject), Name = "FlurryWatch")]
 	public partial interface FlurryWatchAgent {
 
 		[Static, Export ("logWatchEvent:")]
-		FlurryEventStatus LogWatchEvent (string eventName);
+		FlurryEventRecordStatus LogWatchEvent (string eventName);
 
 		[Static, Export ("logWatchEvent:withParameters:")]
-		FlurryEventStatus LogWatchEvent (string eventName, NSDictionary parameters);
+		FlurryEventRecordStatus LogWatchEvent (string eventName, NSDictionary parameters);
 
 		[Static, Export ("logWatchError:message:exception:")]
 		void LogWatchError (string errorID, string message, NSException exception);

@@ -18,7 +18,7 @@ namespace Flurry.Analytics {
 		Female = 0,
 	}
 
-	public enum FlurryEventStatus : uint {
+	public enum FlurryEventRecordStatus : uint {
 		Failed = 0,
 		Recorded,
 		UniqueCountExceeded,
