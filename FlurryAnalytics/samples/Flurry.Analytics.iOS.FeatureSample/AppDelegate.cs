@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.InteropServices;
 
-using MonoTouch.Foundation;
-using MonoTouch.UIKit;
+using Foundation;
+using UIKit;
 
 using Flurry.Analytics;
 
@@ -29,7 +29,8 @@ namespace Flurry.Analytics.iOS.FeatureSample
 		//
 		public override bool FinishedLaunching (UIApplication app, NSDictionary options)
 		{
-			FlurryAgent.SetAppVersion ("1.0.0.0");
+			FlurryAgent.SetAppVersion ("7.2.1.0");
+			FlurryAgent.SetLogLevel (FlurryLogLevel.All);
 			FlurryAgent.StartSession ("PQSZJRK4B5BW8Q7YQQXF");
 
 			// create a new window instance based on the screen size

@@ -30,7 +30,11 @@ namespace Flurry.Analytics.iOS.Sample
 			//note: iOS only allows one crash reporting tool per app; if using another, set to: NO
 			FlurryAgent.SetCrashReportingEnabled(true);
 
-			FlurryAgent.SetAppVersion("1.0.0.0");
+			// log everything
+			FlurryAgent.SetLogLevel(FlurryLogLevel.All);
+
+			// set the app version
+			FlurryAgent.SetAppVersion("7.2.1.0");
 
 			// Replace YOUR_API_KEY with the api key in the downloaded package
 			FlurryAgent.StartSession("PQSZJRK4B5BW8Q7YQQXF");

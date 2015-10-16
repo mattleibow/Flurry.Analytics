@@ -12,8 +12,18 @@ namespace Flurry.Analytics {
 		void OnSessionCreated (NSDictionary info);
 	}
 
-	[BaseType (typeof (NSObject), Name="Flurry")]
+	[BaseType (typeof (NSObject), Name = "Flurry")]
 	public partial interface FlurryAgent {
+		
+		[Static, Field ("kSyndicationiOSDeepLink", "__Internal")]
+		NSString SyndicationiOSDeepLink { get; }
+
+		[Static, Field ("kSyndicationAndroidDeepLink", "__Internal")]
+		NSString SyndicationAndroidDeepLink { get; }
+
+		[Static, Field ("kSyndicationWebDeepLink", "__Internal")]
+		NSString SyndicationWebDeepLink { get; }
+
 
 		[Static, Export ("setDelegate:")]
 		void SetDelegate (FlurryAgentDelegate del);
@@ -36,9 +46,6 @@ namespace Flurry.Analytics {
 		[Static, Export ("setSessionContinueSeconds:")]
 		void SetSessionContinueSeconds (int seconds);
 
-		[Static, Export ("setSecureTransportEnabled:")]
-		void SetSecureTransportEnabled (bool value);
-
 		[Static, Export ("setCrashReportingEnabled:")]
 		void SetCrashReportingEnabled (bool enabled);
 
@@ -52,10 +59,19 @@ namespace Flurry.Analytics {
 		bool ActiveSessionExists { get; }
 
 		[Static, Export("getSessionID")]
-		bool SessionId { get; }
+		string SessionId { get; }
 
 		[Static, Export ("pauseBackgroundSession")]
 		void PauseBackgroundSession ();
+
+		[Static, Export ("addSessionOrigin:withDeepLink:")]
+		void AddSessionOrigin (string sessionOriginName, string deepLink);
+
+		[Static, Export ("addSessionOrigin:")]
+		void AddSessionOrigin (string sessionOriginName);
+
+		[Static, Export ("sessionProperties:")]
+		void SetSessionProperties (NSDictionary parameters);
 
 		[Static, Export ("addOrigin:withVersion:")]
 		void AddOrigin (string originName, string originVersion);
@@ -64,7 +80,7 @@ namespace Flurry.Analytics {
 		void AddOrigin (string originName, string originVersion, NSDictionary parameters);
 
 		[Static, Export ("logEvent:")]
-		void LogEvent (string eventName);
+		FlurryEventStatus LogEvent (string eventName);
 
 		[Static, Export ("logEvent:withParameters:")]
 		FlurryEventStatus LogEvent (string eventName, NSDictionary parameters);
@@ -123,13 +139,16 @@ namespace Flurry.Analytics {
 
 		[Static, Export("setPulseEnabled:")]
 		void SetPulseEnabled (bool enabled);
+
+		[Static, Export ("logEvent:syndicationID:parameters:")]
+		FlurryEventStatus LogEvent (FlurrySyndicationEvent syndicationEvent, string syndicationID, NSDictionary parameters);
 	}
 
-	[BaseType (typeof (NSObject), Name="FlurryWatch")]
+	[BaseType (typeof (NSObject), Name = "FlurryWatch")]
 	public partial interface FlurryWatchAgent {
 
 		[Static, Export ("logWatchEvent:")]
-		void LogWatchEvent (string eventName);
+		FlurryEventStatus LogWatchEvent (string eventName);
 
 		[Static, Export ("logWatchEvent:withParameters:")]
 		FlurryEventStatus LogWatchEvent (string eventName, NSDictionary parameters);

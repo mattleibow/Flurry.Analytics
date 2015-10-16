@@ -1,10 +1,10 @@
 using System;
 using System.Diagnostics;
-using System.Threading;
+using System.Threading.Tasks;
 
 using MonoTouch.Dialog;
-using MonoTouch.Foundation;
-using MonoTouch.UIKit;
+using Foundation;
+using UIKit;
 
 using Flurry.Analytics;
 
@@ -13,16 +13,15 @@ namespace Flurry.Analytics.iOS.FeatureSample
 	public class AnalyticsViewController : DialogViewController
 	{
 		public AnalyticsViewController ()
-			: base (new RootElement (""))
+			: base (new RootElement ("Flurry Analytics"))
 		{
-			this.Title = "FlurryAnalytics";
 		}
 
 		public override void LoadView ()
 		{
 			base.LoadView ();
 
-			var versionElement = new StringElement ("Version", FlurryAgent.GetFlurryAgentVersion ());
+			var versionElement = new StringElement ("Version", FlurryAgent.FlurryAgentVersion);
 
 			var errorElement = new StringElement ("Throw & Log Exception", () => {
 				try {
@@ -46,36 +45,36 @@ namespace Flurry.Analytics.iOS.FeatureSample
 				Debug.WriteLine ("Logged event with parameter.");
 			});
 
-			var timedEventElement = new StringElement ("Timed Event", () => {
+			var timedEventElement = new StringElement ("Timed Event", async () => {
 				FlurryAgent.LogEvent ("TimedEvent", true);
 				var alert = new UIAlertView ("Please Wait", "Doing a longer running operation...", null, null);
 				alert.Show ();
-				Thread.Sleep (1000);
+				await Task.Delay (1000);
 				FlurryAgent.EndTimedEvent ("TimedEvent");
 				alert.DismissWithClickedButtonIndex (-1, true);
 
 				Debug.WriteLine ("Logged timed event.");
 			});
 
-			var timedParameterEventElement = new StringElement ("Timed Event with Parameters", () => {
+			var timedParameterEventElement = new StringElement ("Timed Event with Parameters", async () => {
 				FlurryAgent.LogEvent ("TimedEventWithParameter", GetParameter (), true);
 				var alert = new UIAlertView ("Please Wait", "Doing a longer running operation...", null, null);
 				alert.Show ();
-				Thread.Sleep (1000);
+				await Task.Delay (1000);
 				FlurryAgent.EndTimedEvent ("TimedEventWithParameter");
 				alert.DismissWithClickedButtonIndex (-1, true);
 
 				Debug.WriteLine ("Logged timed event with parameter.");
 			});
 
-			var idElement = new EntryElement ("User ID: ", "enter user id", "");
+			var idElement = new EntryElement ("User ID", "enter user id", "");
 			idElement.Changed += (sender, e) => {
 				FlurryAgent.SetUserId (((EntryElement)sender).Value);
 
 				Debug.WriteLine ("Logged user id.");
 			};
 			
-			var ageElement = new EntryElement ("Age: ", "enter age", "");
+			var ageElement = new EntryElement ("User Age", "enter age", "");
 			ageElement.Changed += (sender, e) => {
 				int age;
 				var element = (EntryElement)sender;
@@ -86,7 +85,7 @@ namespace Flurry.Analytics.iOS.FeatureSample
 				}
 			};
 
-			var genderElement = new RootElement ("Gender: ", new RadioGroup (0)) {
+			var genderElement = new RootElement ("User Gender", new RadioGroup (0)) {
 				new Section () {
 					new SelectableRadioElement ("Unknown", (sender, e) => {
 						FlurryAgent.SetGender (Gender.Unknown);

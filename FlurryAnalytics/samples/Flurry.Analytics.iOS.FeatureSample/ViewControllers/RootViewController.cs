@@ -2,9 +2,9 @@ using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 
-using MonoTouch.CoreLocation;
-using MonoTouch.UIKit;
-using MonoTouch.Foundation;
+using CoreLocation;
+using UIKit;
+using Foundation;
 
 using Flurry.Analytics;
 

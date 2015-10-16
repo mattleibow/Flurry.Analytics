@@ -30,6 +30,10 @@ namespace Flurry.Analytics.iOS.Sample
 
 		[Outlet]
 		[GeneratedCode ("iOS Designer", "1.0")]
+		UIButton LogTimedEventButton { get; set; }
+
+		[Outlet]
+		[GeneratedCode ("iOS Designer", "1.0")]
 		UILabel VersionLabel { get; set; }
 
 		void ReleaseDesignerOutlets ()
@@ -41,6 +45,10 @@ namespace Flurry.Analytics.iOS.Sample
 			if (LogEventButton != null) {
 				LogEventButton.Dispose ();
 				LogEventButton = null;
+			}
+			if (LogTimedEventButton != null) {
+				LogTimedEventButton.Dispose ();
+				LogTimedEventButton = null;
 			}
 			if (VersionLabel != null) {
 				VersionLabel.Dispose ();

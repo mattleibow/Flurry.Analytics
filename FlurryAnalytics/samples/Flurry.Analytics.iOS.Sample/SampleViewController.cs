@@ -47,6 +47,25 @@ namespace Flurry.Analytics.iOS.Sample
 				using (UIAlertView alert = new UIAlertView("Event Logged", "Your event was logged along with the specified parameter.", null, "OK", null))
 					alert.Show();
 			};
+
+			LogTimedEventButton.TouchUpInside += delegate {
+				// start the event
+				if (string.IsNullOrEmpty (EventParameterText.Text))
+					FlurryAgent.LogEvent("Timed Button Click", true);
+				else
+					FlurryAgent.LogEvent(
+						"Timed Button Click", 
+						NSDictionary.FromObjectAndKey(
+							new NSString (EventParameterText.Text), 
+							new NSString ("Log Parameter")),
+						true);
+
+				// end the event
+				FlurryAgent.EndTimedEvent("Timed Button Click");
+
+				using (UIAlertView alert = new UIAlertView("Timed Event Logged", "Your timed event was logged along with the specified parameter.", null, "OK", null))
+					alert.Show();
+			};
 		}
 
 		public override void ViewWillAppear (bool animated)

@@ -24,7 +24,9 @@
     <MtouchDebug>true</MtouchDebug>
     <MtouchI18n>
     </MtouchI18n>
-    <MtouchArch>i386</MtouchArch>
+    <MtouchArch>i386, x86_64</MtouchArch>
+    <MtouchProfiling>true</MtouchProfiling>
+    <MtouchUseRefCounting>true</MtouchUseRefCounting>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">
     <DebugType>full</DebugType>
@@ -32,9 +34,13 @@
     <OutputPath>bin\iPhoneSimulator\Release</OutputPath>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <MtouchLink>None</MtouchLink>
+    <MtouchLink>Full</MtouchLink>
     <ConsolePause>false</ConsolePause>
     <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <MtouchUseRefCounting>true</MtouchUseRefCounting>
+    <MtouchI18n>
+    </MtouchI18n>
+    <MtouchArch>i386, x86_64</MtouchArch>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhone' ">
     <DebugSymbols>true</DebugSymbols>
@@ -48,12 +54,13 @@
     <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
     <MtouchDebug>true</MtouchDebug>
     <CodesignKey>iPhone Developer</CodesignKey>
-    <MtouchExtraArgs>--registrar:legacy</MtouchExtraArgs>
     <MtouchI18n>
     </MtouchI18n>
-    <MtouchArch>ARMv7</MtouchArch>
+    <MtouchArch>ARMv7, ARM64</MtouchArch>
     <IpaPackageName>
     </IpaPackageName>
+    <MtouchUseRefCounting>true</MtouchUseRefCounting>
+    <MtouchProfiling>true</MtouchProfiling>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
     <DebugType>full</DebugType>
@@ -66,7 +73,11 @@
     <CodesignKey>iPhone Developer</CodesignKey>
     <MtouchI18n>
     </MtouchI18n>
-    <MtouchArch>ARMv7</MtouchArch>
+    <MtouchArch>ARMv7, ARM64</MtouchArch>
+    <MtouchUseRefCounting>true</MtouchUseRefCounting>
+    <MtouchLink>Full</MtouchLink>
+    <IpaPackageName>
+    </IpaPackageName>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -96,7 +107,7 @@
   <ItemGroup>
     <ProjectReference Include="..\..\binding\Flurry.Analytics.iOS\Flurry.Analytics.iOS.csproj">
       <Project>{3817227C-4052-458B-9D6E-F0A747E81D2A}</Project>
-      <Name>Flurry.Analytics.iOS-unified</Name>
+      <Name>Flurry.Analytics.iOS</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

@@ -3,7 +3,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">iPhoneSimulator</Platform>
-    <ProjectTypeGuids>{6BC8ED88-2882-458C-8E55-DFD12B67127B};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <ProjectTypeGuids>{FEACFBD2-3405-455C-9665-78FE426C6842};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <ProjectGuid>{57E6A240-6CE6-40D4-AA78-4EC9C145B081}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <RootNamespace>Flurry.Analytics.iOS.FeatureSample</RootNamespace>
@@ -15,31 +15,40 @@
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
     <OutputPath>bin\iPhoneSimulator\Debug</OutputPath>
-    <DefineConstants>DEBUG;__MOBILE__;__IOS__;</DefineConstants>
+    <DefineConstants>DEBUG;__MOBILE__;__IOS__;__UNIFIED__</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <ConsolePause>false</ConsolePause>
     <MtouchLink>None</MtouchLink>
     <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
     <MtouchDebug>true</MtouchDebug>
+    <MtouchProfiling>true</MtouchProfiling>
+    <MtouchI18n>
+    </MtouchI18n>
+    <MtouchArch>i386, x86_64</MtouchArch>
+    <MtouchUseRefCounting>true</MtouchUseRefCounting>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">
     <DebugType>full</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\iPhoneSimulator\Release</OutputPath>
-    <DefineConstants>__MOBILE__;__IOS__;</DefineConstants>
+    <DefineConstants>__MOBILE__;__IOS__;__UNIFIED__</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <MtouchLink>None</MtouchLink>
+    <MtouchLink>Full</MtouchLink>
     <ConsolePause>false</ConsolePause>
     <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <MtouchI18n>
+    </MtouchI18n>
+    <MtouchArch>i386, x86_64</MtouchArch>
+    <MtouchUseRefCounting>true</MtouchUseRefCounting>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhone' ">
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
     <OutputPath>bin\iPhone\Debug</OutputPath>
-    <DefineConstants>DEBUG;__MOBILE__;__IOS__;</DefineConstants>
+    <DefineConstants>DEBUG;__MOBILE__;__IOS__;__UNIFIED__</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <ConsolePause>false</ConsolePause>
@@ -50,24 +59,32 @@
     </IpaPackageName>
     <MtouchI18n>
     </MtouchI18n>
-    <MtouchArch>ARMv7</MtouchArch>
+    <MtouchArch>ARMv7, ARM64</MtouchArch>
+    <MtouchUseRefCounting>true</MtouchUseRefCounting>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
     <DebugType>full</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\iPhone\Release</OutputPath>
-    <DefineConstants>__MOBILE__;__IOS__;</DefineConstants>
+    <DefineConstants>__MOBILE__;__IOS__;__UNIFIED__</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
     <ConsolePause>false</ConsolePause>
     <CodesignKey>iPhone Developer</CodesignKey>
+    <MtouchLink>Full</MtouchLink>
+    <MtouchI18n>
+    </MtouchI18n>
+    <MtouchArch>ARMv7, ARM64</MtouchArch>
+    <MtouchUseRefCounting>true</MtouchUseRefCounting>
+    <IpaPackageName>
+    </IpaPackageName>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
-    <Reference Include="monotouch" />
+    <Reference Include="Xamarin.iOS" />
     <Reference Include="MonoTouch.Dialog-1" />
   </ItemGroup>
   <ItemGroup>
@@ -83,10 +100,10 @@
     <Compile Include="ViewControllers\AnalyticsViewController.cs" />
     <Compile Include="ViewControllers\RootViewController.cs" />
   </ItemGroup>
-  <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.MonoTouch.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <ItemGroup>
     <ProjectReference Include="..\..\binding\Flurry.Analytics.iOS\Flurry.Analytics.iOS.csproj">
-      <Project>{B268C687-B474-41E5-9219-893DC13F9FE4}</Project>
+      <Project>{3817227C-4052-458B-9D6E-F0A747E81D2A}</Project>
       <Name>Flurry.Analytics.iOS</Name>
     </ProjectReference>
   </ItemGroup>
