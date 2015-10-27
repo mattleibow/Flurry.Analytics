@@ -120,10 +120,6 @@
       <Project>{3817227C-4052-458B-9D6E-F0A747E81D2A}</Project>
       <Name>Flurry.Analytics.iOS</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\binding\Flurry.Tumblr.iOS\Flurry.Tumblr.iOS.csproj">
-      <Project>{3817227C-4052-458B-9D6E-F0A747E81D2F}</Project>
-      <Name>Flurry.Tumblr.iOS</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="Main.storyboard" />

@@ -7,8 +7,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Flurry.Analytics.iOS", "..\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Flurry.Ads.iOS", "..\..\binding\Flurry.Ads.iOS\Flurry.Ads.iOS.csproj", "{3817227C-4052-458B-9D6E-F0A747E81D2C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Flurry.Tumblr.iOS", "..\..\binding\Flurry.Tumblr.iOS\Flurry.Tumblr.iOS.csproj", "{3817227C-4052-458B-9D6E-F0A747E81D2F}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|iPhoneSimulator = Debug|iPhoneSimulator
@@ -33,14 +31,6 @@ Global
 		{3817227C-4052-458B-9D6E-F0A747E81D2C}.Release|iPhone.Build.0 = Release|Any CPU
 		{3817227C-4052-458B-9D6E-F0A747E81D2C}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
 		{3817227C-4052-458B-9D6E-F0A747E81D2C}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
-		{3817227C-4052-458B-9D6E-F0A747E81D2F}.Debug|iPhone.ActiveCfg = Debug|Any CPU
-		{3817227C-4052-458B-9D6E-F0A747E81D2F}.Debug|iPhone.Build.0 = Debug|Any CPU
-		{3817227C-4052-458B-9D6E-F0A747E81D2F}.Debug|iPhoneSimulator.ActiveCfg = Debug|Any CPU
-		{3817227C-4052-458B-9D6E-F0A747E81D2F}.Debug|iPhoneSimulator.Build.0 = Debug|Any CPU
-		{3817227C-4052-458B-9D6E-F0A747E81D2F}.Release|iPhone.ActiveCfg = Release|Any CPU
-		{3817227C-4052-458B-9D6E-F0A747E81D2F}.Release|iPhone.Build.0 = Release|Any CPU
-		{3817227C-4052-458B-9D6E-F0A747E81D2F}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
-		{3817227C-4052-458B-9D6E-F0A747E81D2F}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
 		{FED39372-1E87-448D-9061-2D883732115A}.Debug|iPhone.ActiveCfg = Debug|iPhone
 		{FED39372-1E87-448D-9061-2D883732115A}.Debug|iPhone.Build.0 = Debug|iPhone
 		{FED39372-1E87-448D-9061-2D883732115A}.Debug|iPhoneSimulator.ActiveCfg = Debug|iPhoneSimulator
