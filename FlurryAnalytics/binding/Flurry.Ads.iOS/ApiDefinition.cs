@@ -31,23 +31,23 @@ namespace Flurry.Ads {
 	interface FlurryAds
 	{
 		[Static, Export ("fetchAdForSpace:frame:size:")]
-		void FetchAdForSpace (string space, CGRect frame, AdSize size);
+		void FetchAd (string space, CGRect frame, AdSize size);
 
 		[Static, Export ("adReadyForSpace:")]
-		bool AdReadyForSpace (string space);
+		bool IsAdReady (string space);
 
 		[Static, Export ("displayAdForSpace:onView:viewControllerForPresentation:")]
-		void DisplayAdForSpace (string space, UIView view, UIViewController viewControllerForPresentation);
+		void DisplayAd (string space, UIView view, UIViewController viewControllerForPresentation);
 
 		[Obsolete ("This method has been deprecated. Use the overload that accepts a UIView instead.")]
 		[Static, Export ("displayAdForSpace:modallyForViewController:")]
-		void DisplayAdForSpace (string space, UIViewController viewController);
+		void DisplayAd (string space, UIViewController viewController);
 
 		[Static, Export ("fetchAndDisplayAdForSpace:view:viewController:size:")]
-		void FetchAndDisplayAdForSpace (string space, UIView viewContainer, UIViewController viewControllerForPresentation, AdSize size);
+		void FetchAndDisplayAd (string space, UIView viewContainer, UIViewController viewControllerForPresentation, AdSize size);
 
 		[Static, Export ("removeAdFromSpace:")]
-		void RemoveAdFromSpace (string space);
+		void RemoveAd (string space);
 
 		[Static, Export ("initialize:")]
 		void Initialize (UIViewController rvc);
@@ -65,10 +65,10 @@ namespace Flurry.Ads {
 		void ClearUserCookies ();
 
 		[Static, Export ("setKeywordsForTargeting:")]
-		void SetKeywordsForTargeting (NSDictionary keywords);
+		void SetTargetingKeywords (NSDictionary keywords);
 
 		[Static, Export ("clearKeywords")]
-		void ClearKeywords ();
+		void ClearTargetingKeywords ();
 
 //		[Static, Export ("addCustomAdNetwork:withProperties:")]
 //		void AddCustomAdNetwork (FlurryCustomAdNetwork adNetworkClass, FlurryCustomAdNetworkProperties adNetworkProperties);
@@ -217,19 +217,19 @@ namespace Flurry.Ads.Banner {
 		IFlurryAdBannerDelegate AdDelegate { get; set; }
 
 		[Export ("ready")]
-		bool Ready { get; }
+		bool IsReady { get; }
 
 		[Export ("initWithSpace:")]
 		IntPtr Constructor (string space);
 
 		[Export ("fetchAdForFrame:")]
-		void FetchAdForFrame (CGRect frame);
+		void FetchAd (CGRect frame);
 
 		[Export ("displayAdInView:viewControllerForPresentation:")]
-		void DisplayAdInView (UIView view, UIViewController viewController);
+		void DisplayAd (UIView view, UIViewController viewController);
 
 		[Export ("fetchAndDisplayAdInView:viewControllerForPresentation:")]
-		void FetchAndDisplayAdInView (UIView view, UIViewController viewController);
+		void FetchAndDisplayAd (UIView view, UIViewController viewController);
 	}
 }
 
@@ -282,7 +282,7 @@ namespace Flurry.Ads.Interstitial {
 		IFlurryAdInterstitialDelegate AdDelegate { get; set; }
 
 		[Export ("ready")]
-		bool Ready { get; }
+		bool IsReady { get; }
 
 		[Export ("initWithSpace:")]
 		IntPtr Constructor (string space);
@@ -291,7 +291,7 @@ namespace Flurry.Ads.Interstitial {
 		void FetchAd ();
 
 		[Export ("presentWithViewController:")]
-		void PresentWithViewController (UIViewController presentingViewController);
+		void Present (UIViewController presentingViewController);
 	}
 }
 
@@ -357,10 +357,10 @@ namespace Flurry.Ads.Native {
 		IFlurryAdNativeDelegate AdDelegate { get; set; }
 
 		[Export ("ready")]
-		bool Ready { get; }
+		bool IsReady { get; }
 
 		[Export ("expired")]
-		bool Expired { get; }
+		bool IsExpired { get; }
 
 		[Export ("assetList")]
 		NSObject[] AssetList { get; }
@@ -369,7 +369,7 @@ namespace Flurry.Ads.Native {
 		UIView TrackingView { get; set; }
 
 		[Export ("viewControllerForPresentation", ArgumentSemantic.Retain)]
-		UIViewController ViewControllerForPresentation { get; set; }
+		UIViewController PresentationViewController { get; set; }
 
 		[Export ("videoViewContainer", ArgumentSemantic.Retain)]
 		UIView VideoViewContainer { get; set; }
@@ -384,7 +384,7 @@ namespace Flurry.Ads.Native {
 		void FetchAd ();
 
 		[Export ("assetListForType:")]
-		NSObject[] AssetListForType (AssetType type);
+		NSObject[] GetAssetList (AssetType type);
 
 		[Export ("removeTrackingView")]
 		void RemoveTrackingView ();

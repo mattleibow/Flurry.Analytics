@@ -38,6 +38,8 @@ namespace FlurryAdsiOSSample
 			showAd.Layer.BorderColor = UIColor.Gray.CGColor;
 			showAd.Layer.CornerRadius = 10;
 
+			statusLbl.TextColor = UIColor.Orange;
+
 			// Fetch and display banner ad for a given ad space.
 			// Note: Choose an adspace name that
 			// will uniquely identifiy the ad's placement within your app
@@ -56,40 +58,38 @@ namespace FlurryAdsiOSSample
 #endif
 
 			adBanner.DidFetchAd += delegate {
-				Console.WriteLine (" Ad Space [{0}] Did Fetch Ad ===== ", adBanner.Space);
-				statusLbl.Text = "Ad fetched for " + adBanner.Space;
-				adBanner.DisplayAdInView (View, this);
+				statusLbl.Text = string.Format (" [{0}] Did Fetch Ad ", adBanner.Space);
+
+				adBanner.DisplayAd (View, this);
 			};
 			adBanner.DidRenderAd += delegate {
-				Console.WriteLine (" Ad Space [{0}] Did Render Ad ===== ", adBanner.Space);
-				statusLbl.Text = "Ad displayed for " + adBanner.Space;
+				statusLbl.Text = string.Format (" [{0}] Did Render Ad ", adBanner.Space);
 			};
 			adBanner.WillPresentFullscreen += delegate {
-				Console.WriteLine (" Ad Space [{0}] Will Present Fullscreen Ad ===== ", adBanner.Space);
+				statusLbl.Text = string.Format (" [{0}] Will Present Fullscreen Ad ", adBanner.Space);
 			};
 			adBanner.DidReceiveClick += delegate {
-				Console.WriteLine (" Ad Space [{0}] Did Receive Click Ad ===== ", adBanner.Space);
+				statusLbl.Text = string.Format (" [{0}] Did Receive Click Ad ", adBanner.Space);
 			};
 			adBanner.DidDismissFullscreen += delegate {
-				Console.WriteLine (" Ad Space [{0}] Did Dismiss Fullscreen Ad ===== ", adBanner.Space);
+				statusLbl.Text = string.Format (" [{0}] Did Dismiss Fullscreen Ad ", adBanner.Space);
 			};
 			adBanner.WillLeaveApplication += delegate {
-				Console.WriteLine (" Ad Space [{0}] Will Leave Application ===== ", adBanner.Space);
+				statusLbl.Text = string.Format (" [{0}] Will Leave Application ", adBanner.Space);
 			};
 			adBanner.DidFinishVideo += delegate {
-				Console.WriteLine (" Ad Space [{0}] Did Finish Video ===== ", adBanner.Space);
+				statusLbl.Text = string.Format (" [{0}] Did Finish Video ", adBanner.Space);
 			};
 			adBanner.WillPresentFullscreen += delegate {
-				Console.WriteLine (" Ad Space [{0}] Will Present Fullscreen Ad ===== ", adBanner.Space);
+				statusLbl.Text = string.Format (" [{0}] Will Present Fullscreen Ad ", adBanner.Space);
 			};
 			adBanner.Error += (_, e) => {
-				Console.WriteLine (" Ad Space [{0}] Did Fail to Receive Ad with error [{1}] ===== ", adBanner.Space, e.ErrorDescription);
+				statusLbl.Text = string.Format (" [{0}] Did Fail to Receive Ad with error [{1}] ", adBanner.Space, e.ErrorDescription);
 			};
 
-			adBanner.FetchAdForFrame (View.Frame);
-		
-			statusLbl.TextColor = UIColor.Orange;
-			statusLbl.Text = "Ad being fetched for " + adBanner.Space;
+			statusLbl.Text = string.Format (" [{0}] Will Fetch Ad ", adBanner.Space);
+
+			adBanner.FetchAd (View.Frame);
 		}
 
 		partial void showAdClickedButton (UIButton sender)
