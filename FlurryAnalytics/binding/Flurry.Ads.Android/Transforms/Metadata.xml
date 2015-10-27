@@ -1,0 +1,35 @@
+﻿<metadata>
+
+  <!-- remove internal namespaces -->
+  <remove-node path="/api/package[@name='com.flurry.sdk']" />
+
+  <!-- use C# namespaces -->
+  <attr path="/api/package[@name='com.flurry.android']" name="managedName">Flurry.Ads</attr>
+  <attr path="/api/package[@name='com.flurry.android.ads']" name="managedName">Flurry.Ads</attr>
+
+  <attr path="/api/package[@name='com.flurry.android']/interface[@name='FlurryAdListener']/method/parameter[1][@type='java.lang.String']" name="managedName">adSpace</attr>
+
+  <attr path="/api/package[@name='com.flurry.android.ads']/interface[@name='FlurryAdInterstitialListener']/method/parameter[1][@type='com.flurry.android.ads.FlurryAdInterstitial']" name="managedName">adInterstitial</attr>
+  <attr path="/api/package[@name='com.flurry.android.ads']/interface[@name='FlurryAdBannerListener']/method/parameter[1][@type='com.flurry.android.ads.FlurryAdBanner']" name="managedName">adBanner</attr>
+  <attr path="/api/package[@name='com.flurry.android.ads']/interface[@name='FlurryAdNativeListener']/method/parameter[1][@type='com.flurry.android.ads.FlurryAdNative']" name="managedName">adNative</attr>
+
+  <attr path="/api/package[@name='com.flurry.android.ads']/interface[@name='FlurryAdInterstitialListener']/method[@name='onError']/parameter[2][@type='com.flurry.android.ads.FlurryAdErrorType']" name="managedName">interstitialErrorType</attr>
+  <attr path="/api/package[@name='com.flurry.android.ads']/interface[@name='FlurryAdBannerListener']/method[@name='onError']/parameter[2][@type='com.flurry.android.ads.FlurryAdErrorType']" name="managedName">bannerErrorType</attr>
+  <attr path="/api/package[@name='com.flurry.android.ads']/interface[@name='FlurryAdNativeListener']/method[@name='onError']/parameter[2][@type='com.flurry.android.ads.FlurryAdErrorType']" name="managedName">nativeErrorType</attr>
+
+  <attr path="/api/package[@name='com.flurry.android.ads']/interface[@name='FlurryAdInterstitialListener']/method[@name='onError']/parameter[3][@type='int']" name="managedName">interstitialError</attr>
+  <attr path="/api/package[@name='com.flurry.android.ads']/interface[@name='FlurryAdBannerListener']/method[@name='onError']/parameter[3][@type='int']" name="managedName">bannerError</attr>
+  <attr path="/api/package[@name='com.flurry.android.ads']/interface[@name='FlurryAdNativeListener']/method[@name='onError']/parameter[3][@type='int']" name="managedName">nativeError</attr>
+
+  <attr path="/api/package[@name='com.flurry.android']/class[@name='AdNetworkView']" name="extends">android.widget.RelativeLayout</attr>
+  <attr path="/api/package[@name='com.flurry.android.ads']/class[@name='FlurryAdTargeting']" name="extends">java.lang.Object</attr>
+
+  <attr path="/api/package[@name='com.flurry.android']/class[@name='FlurryFullscreenTakeoverActivity']/method[@name='onStart']" name="visibility">protected</attr>
+  <attr path="/api/package[@name='com.flurry.android']/class[@name='FlurryFullscreenTakeoverActivity']/method[@name='onStop']" name="visibility">protected</attr>
+  <attr path="/api/package[@name='com.flurry.android']/class[@name='FlurryFullscreenTakeoverActivity']/method[@name='onCreate']" name="visibility">protected</attr>
+
+  <attr path="/api/package[@name='com.flurry.android.ads']/interface[@name='FlurryAdInterstitialListener']/method" name="eventName"></attr>
+  <attr path="/api/package[@name='com.flurry.android.ads']/interface[@name='FlurryAdBannerListener']/method" name="eventName"></attr>
+  <attr path="/api/package[@name='com.flurry.android.ads']/interface[@name='FlurryAdNativeListener']/method" name="eventName"></attr>
+
+</metadata>

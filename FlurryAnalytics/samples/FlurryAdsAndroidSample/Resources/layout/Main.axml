@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <Button
+        android:id="@+id/showInterstitial"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/showInterstitial"
+        android:layout_centerInParent="true" />
+    <RelativeLayout
+        android:id="@+id/bannerContainer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+    <TextView
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/showInterstitial"
+        android:id="@+id/statusLabel"
+        android:layout_centerHorizontal="true" />
+</RelativeLayout>
