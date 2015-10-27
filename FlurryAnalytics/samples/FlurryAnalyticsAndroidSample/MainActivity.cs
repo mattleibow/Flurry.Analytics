@@ -1,16 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-
+﻿using System.Collections.Generic;
 using Android.App;
-using Android.Content;
-using Android.Runtime;
-using Android.Views;
 using Android.Widget;
 using Android.OS;
 
-namespace Flurry.Analytics.Android.Sample
+using Flurry.Analytics;
+
+namespace FlurryAnalyticsAndroidSample
 {
-	[Activity (Label = "Flurry.Analytics.Android.Sample", MainLauncher = true, Icon = "@drawable/icon")]
+	[Activity (Label = "Flurry Analytics", MainLauncher = true, Icon = "@drawable/icon")]
 	public class MainActivity : Activity
 	{
 		protected override void OnCreate (Bundle bundle)
@@ -27,7 +24,7 @@ namespace Flurry.Analytics.Android.Sample
 			VersionLabel.Text = FlurryAgent.ReleaseVersion;
 
 			LogEventButton.Click += delegate {
-				FlurryEventStatus status;
+				FlurryEventRecordStatus status;
 				if (string.IsNullOrEmpty (EventParameterText.Text))
 					status = FlurryAgent.LogEvent ("Button Click");
 				else

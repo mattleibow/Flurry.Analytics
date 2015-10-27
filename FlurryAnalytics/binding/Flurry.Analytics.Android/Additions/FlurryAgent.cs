@@ -4,9 +4,28 @@ namespace Flurry.Analytics
 {
 	public partial class FlurryAgent
 	{
-		public static void SetGender(Gender gender)
+		private static WeakReference sessionStartedListener;
+
+		public static void SetGender (Gender gender)
 		{
 			FlurryAgent.SetGender ((sbyte)gender);
+		}
+
+		public static event EventHandler SessionStarted {
+			add {
+				global::Java.Interop.EventHelper.AddEventHandler<IFlurryAgentListener, IFlurryAgentListenerImplementor> (
+					ref sessionStartedListener,
+					() => new IFlurryAgentListenerImplementor(null),
+					SetFlurryAgentListener,
+					h => h.Handler += value);
+			}
+			remove {
+				global::Java.Interop.EventHelper.RemoveEventHandler<IFlurryAgentListener, IFlurryAgentListenerImplementor> (
+					ref sessionStartedListener,
+					IFlurryAgentListenerImplementor.__IsEmpty,
+					v => SetFlurryAgentListener (null),
+					h => h.Handler -= value);
+			}
 		}
 	}
 
@@ -17,16 +36,16 @@ namespace Flurry.Analytics
 		Unknown = -1
 	}
 	
+	[Obsolete ("Use the FlurryAgent.SessionStarted event instead.")]
 	public class FlurryAgentEventsListener : Java.Lang.Object, IFlurryAgentListener
 	{
 		public event EventHandler SessionStarted;
 
-		public void OnSessionStarted()
+		public void OnSessionStarted ()
 		{
 			var handler = SessionStarted;
-			if (handler != null)
-			{
-				handler(this, EventArgs.Empty);
+			if (handler != null) {
+				handler (this, EventArgs.Empty);
 			}
 		}
 	}

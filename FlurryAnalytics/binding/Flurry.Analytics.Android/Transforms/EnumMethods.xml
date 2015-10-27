@@ -21,4 +21,9 @@
     <method jni-name="setGender" parameter="p0" clr-enum-type="Flurry.Analytics.Gender" />
   </mapping>
 -->
+
+  <mapping jni-class="com/flurry/android/FlurryAgent">
+    <method jni-name="setLogLevel" parameter="p0" clr-enum-type="Android.Util.LogPriority" />
+  </mapping>
+
 </enum-method-mappings>
