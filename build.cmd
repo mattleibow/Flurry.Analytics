@@ -24,7 +24,7 @@ msbuild Flurry.Analytics.Portable.sln /p:Configuration=Release /t:Build
 
 rem build the portable analytics nuget
 echo Packaging the portable analytics NuGet
-nuget pack nuget\Flurry.Analytics.Portable.nuspec
+nuget pack nuget\Flurry.Analytics.Portable.nuspec -Output nuget
 
 rem build the portable analytics samples
 echo Building the portable analytics samples solution
