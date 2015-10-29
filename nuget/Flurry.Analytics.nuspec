@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+    <metadata>
+        <id>Flurry.Analytics</id>
+        <version>2.0.0</version>
+        <title>Flurry Analytics</title>
+        <authors>Matthew Leibowitz</authors>
+        <licenseUrl>https://github.com/mattleibow/Flurry.Analytics/blob/master/License.md</licenseUrl>
+        <projectUrl>https://github.com/mattleibow/Flurry.Analytics</projectUrl>
+        <iconUrl>https://raw.githubusercontent.com/mattleibow/Flurry.Analytics/master/icons/flurry-analytics_128x128.png</iconUrl>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <description>The Flurry Analytics SDK provides you with the tools and resources you need to gain a deep level of understanding about your users’ behavior in your apps. Set up advanced analysis of complex events, with metrics, segments and funnels to better track your users’ habits and performance.</description>
+        <copyright>Flurry, Inc. and .NET Development Addict</copyright>
+        <tags>flurry,analytics,xamarin,ios,windows phone,android,mobile</tags>
+    </metadata>
+    <files>
+        <file src="..\Flurry\binding\Flurry.Analytics.Android\bin\Release\Flurry.Analytics.Android.dll" target="lib\MonoAndroid10\Flurry.Analytics.Android.dll" />
+        <file src="..\Flurry\binding\Flurry.Analytics.iOS\bin\Release\Flurry.Analytics.iOS.dll" target="lib\Xamarin.iOS10\Flurry.Analytics.iOS.dll" />
+        <file src="..\Flurry\binding\Flurry.Analytics.WP8\FlurryWP8SDK.dll" target="lib\wp8\FlurryWP8SDK.dll" />
+    </files>
+</package>

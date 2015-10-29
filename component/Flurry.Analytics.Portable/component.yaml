@@ -1,0 +1,40 @@
+id: Flurry.Analytics.Portable
+name: Flurry Analytics Plugin
+publisher: Matthew Leibowitz
+publisher-url: http://www.twitter.com/mattleibow
+summary: The Flurry Analytics SDK provides you with the tools and resources you need to gain a deep level of understanding about your users’ behavior in your apps.
+version: 2.0.0
+src-url: https://github.com/mattleibow/Flurry.Analytics
+
+details: Details.md
+license: ../../License.md
+getting-started: GettingStarted.md
+
+is_shell: true
+no_build: true
+packages:
+  winphone-8.0: Flurry.Analytics.Portable, Version=2.0.0
+  android: Flurry.Analytics.Portable, Version=2.0.0
+  ios-unified: Flurry.Analytics.Portable, Version=2.0.0
+local-nuget-repo: ../../nuget/
+
+icons: 
+  - ../../icons/flurry-analytics_128x128.png
+  - ../../icons/flurry-analytics_512x512.png
+
+samples: 
+  - name: Flurry Analytics Plugin Sample (MVVM Cross)
+    path: ../../Portable/samples/MvvmCrossSample/Flurry.Analytics.Portable.Samples.sln
+    installNuGets:
+      - project: MvvmCrossSample.Core
+        packages:
+          - Flurry.Analytics
+      - project: MvvmCrossSample.Droid
+        packages:
+          - Flurry.Analytics
+      - project: MvvmCrossSample.iOS
+        packages:
+          - Flurry.Analytics
+      - project: MvvmCrossSample.WindowsPhone
+        packages:
+          - Flurry.Analytics

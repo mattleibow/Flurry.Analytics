@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+    <metadata>
+        <id>Flurry.Ads</id>
+        <version>2.0.0</version>
+        <title>Flurry Ads (Yahoo App Publishing)</title>
+        <authors>Matthew Leibowitz</authors>
+        <licenseUrl>https://github.com/mattleibow/Flurry.Analytics/blob/master/License.md</licenseUrl>
+        <projectUrl>https://github.com/mattleibow/Flurry.Analytics</projectUrl>
+        <iconUrl>https://raw.githubusercontent.com/mattleibow/Flurry.Analytics/master/icons/flurry-analytics_128x128.png</iconUrl>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <description>Yahoo App Publishing provides a flexible ad-serving platform that is easy to set up and use, enabling you to maximize your ad revenue and engage actively with your users. As a Publisher, you can drive revenue by creating banners, interstitials, native and video ads for your app.</description>
+        <copyright>Flurry, Inc. and .NET Development Addict</copyright>
+        <tags>flurry,ads,publisher,advertising,xamarin,ios,android,mobile</tags>
+        <dependencies>
+            <group targetFramework="XamariniOS1.0">
+                <dependency id="Flurry.Analytics" version="2.0.0" />
+            </group>
+            <group targetFramework="MonoAndroid1.0">
+                <dependency id="Flurry.Analytics" version="2.0.0" />
+            </group>
+        </dependencies>        
+    </metadata>
+    <files>
+        <file src="..\Flurry\binding\Flurry.Ads.Android\bin\Release\Flurry.Ads.Android.dll" target="lib\MonoAndroid10\Flurry.Ads.Android.dll" />
+        <file src="..\Flurry\binding\Flurry.Ads.iOS\bin\Release\Flurry.Ads.iOS.dll" target="lib\Xamarin.iOS10\Flurry.Ads.iOS.dll" />
+    </files>
+</package>

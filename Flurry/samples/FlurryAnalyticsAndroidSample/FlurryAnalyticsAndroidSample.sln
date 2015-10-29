@@ -1,7 +1,6 @@
-
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
-VisualStudioVersion = 12.0.30501.0
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlurryAnalyticsAndroidSample", "FlurryAnalyticsAndroidSample.csproj", "{6A548BFB-66ED-4601-981B-C034B023A039}"
 EndProject
@@ -13,16 +12,16 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{537319CA-4CD0-4271-A3B3-157E41B877B3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{537319CA-4CD0-4271-A3B3-157E41B877B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{537319CA-4CD0-4271-A3B3-157E41B877B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{537319CA-4CD0-4271-A3B3-157E41B877B3}.Release|Any CPU.Build.0 = Release|Any CPU
 		{6A548BFB-66ED-4601-981B-C034B023A039}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{6A548BFB-66ED-4601-981B-C034B023A039}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6A548BFB-66ED-4601-981B-C034B023A039}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
 		{6A548BFB-66ED-4601-981B-C034B023A039}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6A548BFB-66ED-4601-981B-C034B023A039}.Release|Any CPU.Build.0 = Release|Any CPU
 		{6A548BFB-66ED-4601-981B-C034B023A039}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{537319CA-4CD0-4271-A3B3-157E41B877B3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{537319CA-4CD0-4271-A3B3-157E41B877B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{537319CA-4CD0-4271-A3B3-157E41B877B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{537319CA-4CD0-4271-A3B3-157E41B877B3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

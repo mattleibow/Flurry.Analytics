@@ -2,13 +2,14 @@
 using Android.App;
 using Android.Widget;
 using Android.OS;
+using Android.Support.V7.App;
 
 using Flurry.Analytics;
 
 namespace FlurryAnalyticsAndroidSample
 {
-	[Activity (Label = "Flurry Analytics", MainLauncher = true, Icon = "@drawable/icon")]
-	public class MainActivity : Activity
+	[Activity (Label = "@string/app_name", MainLauncher = true, Icon = "@drawable/icon", Theme = "@style/Theme.AppCompat.Light.DarkActionBar")]
+	public class MainActivity : AppCompatActivity
 	{
 		protected override void OnCreate (Bundle bundle)
 		{

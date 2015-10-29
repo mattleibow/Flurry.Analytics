@@ -6,9 +6,9 @@ using System.Windows.Markup;
 using System.Windows.Navigation;
 using Microsoft.Phone.Controls;
 using Microsoft.Phone.Shell;
-using Flurry.Analytics.WindowsPhone.Sample.Resources;
+using FlurryAnalyticsWindowsPhoneSample.Resources;
 
-namespace Flurry.Analytics.WindowsPhone.Sample
+namespace FlurryAnalyticsWindowsPhoneSample
 {
 	public partial class App : Application
 	{

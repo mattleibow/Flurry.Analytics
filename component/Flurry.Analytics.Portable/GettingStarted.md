@@ -1,4 +1,3 @@
-# Getting Started with Flurry Analytics
 Now that you are going to be adding Flurry Analytics to your mobile app, here are a few things to help you get going. Here we show you how to first add Flurry Analytics to your app and then to extend statistics to logged events, user demographics and device location.
 
 ## Adding Flurry Analytics

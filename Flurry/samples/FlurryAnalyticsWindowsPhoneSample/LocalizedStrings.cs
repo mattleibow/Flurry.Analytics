@@ -1,6 +1,6 @@
-﻿using Flurry.Analytics.WindowsPhone.Sample.Resources;
+﻿using FlurryAnalyticsWindowsPhoneSample.Resources;
 
-namespace Flurry.Analytics.WindowsPhone.Sample
+namespace FlurryAnalyticsWindowsPhoneSample
 {
 	/// <summary>
 	/// Provides access to string resources.

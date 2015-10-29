@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Flurry.Analytics.WindowsPhone.Sample.Resources
+namespace FlurryAnalyticsWindowsPhoneSample.Resources
 {
 	using System;
 
@@ -45,7 +45,7 @@ namespace Flurry.Analytics.WindowsPhone.Sample.Resources
 			{
 				if (object.ReferenceEquals(resourceMan, null))
 				{
-					global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Flurry.Analytics.WindowsPhone.Sample.Resources.AppResources", typeof(AppResources).Assembly);
+					global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("FlurryAnalyticsWindowsPhoneSample.Resources.AppResources", typeof(AppResources).Assembly);
 					resourceMan = temp;
 				}
 				return resourceMan;
