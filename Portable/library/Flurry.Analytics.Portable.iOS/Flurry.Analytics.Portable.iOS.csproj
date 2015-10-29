@@ -55,8 +55,8 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\FlurryAnalytics\binding\Flurry.Analytics.iOS\Flurry.Analytics.iOS.csproj">
-      <Project>{3817227c-4052-458b-9d6e-f0a747e81d2a}</Project>
+    <ProjectReference Include="..\..\..\Flurry\binding\Flurry.Analytics.iOS\Flurry.Analytics.iOS.csproj">
+      <Project>{3817227C-4052-458B-9D6E-F0A747E81D2A}</Project>
       <Name>Flurry.Analytics.iOS</Name>
     </ProjectReference>
   </ItemGroup>

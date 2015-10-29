@@ -57,8 +57,8 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\FlurryAnalytics\binding\Flurry.Analytics.Android\Flurry.Analytics.Android.csproj">
-      <Project>{537319ca-4cd0-4271-a3b3-157e41b877b3}</Project>
+    <ProjectReference Include="..\..\..\Flurry\binding\Flurry.Analytics.Android\Flurry.Analytics.Android.csproj">
+      <Project>{537319CA-4CD0-4271-A3B3-157E41B877B3}</Project>
       <Name>Flurry.Analytics.Android</Name>
     </ProjectReference>
   </ItemGroup>
