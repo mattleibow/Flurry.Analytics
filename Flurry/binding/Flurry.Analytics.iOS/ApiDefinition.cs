@@ -153,9 +153,11 @@ namespace Flurry.Analytics {
 		[Static, Export ("logWatchEvent:withParameters:")]
 		FlurryEventRecordStatus LogWatchEvent (string eventName, NSDictionary parameters);
 
+		[Obsolete ("This routine is deprecated and will be removed in the next release, please use LogWatchEvent in its place.")]
 		[Static, Export ("logWatchError:message:exception:")]
 		void LogWatchError (string errorID, string message, NSException exception);
 
+		[Obsolete ("This routine is deprecated and will be removed in the next release, please use LogWatchEvent in its place.")]
 		[Static, Export ("logWatchError:message:error:")]
 		void LogWatchError (string errorID, string message, NSError error);
 	}

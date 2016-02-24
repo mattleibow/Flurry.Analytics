@@ -125,6 +125,40 @@ namespace Flurry.Ads
 					h => h.OnImpressionLoggedHandler -= value);
 			}
 		}
+
+		public event EventHandler Expanded {
+			add {
+				EventHelper.AddEventHandler<IFlurryAdNativeListener, FlurryAdNativeListener> (
+					ref listener,
+					() => new FlurryAdNativeListener (),
+					SetListener,
+					h => h.OnExpandedHandler += value);
+			}
+			remove {
+				EventHelper.RemoveEventHandler<IFlurryAdNativeListener, FlurryAdNativeListener> (
+					ref listener,
+					FlurryAdNativeListener.IsEmpty,
+					v => SetListener (null),
+					h => h.OnExpandedHandler -= value);
+			}
+		}
+
+		public event EventHandler Collapsed {
+			add {
+				EventHelper.AddEventHandler<IFlurryAdNativeListener, FlurryAdNativeListener> (
+					ref listener,
+					() => new FlurryAdNativeListener (),
+					SetListener,
+					h => h.OnCollapsedHandler += value);
+			}
+			remove {
+				EventHelper.RemoveEventHandler<IFlurryAdNativeListener, FlurryAdNativeListener> (
+					ref listener,
+					FlurryAdNativeListener.IsEmpty,
+					v => SetListener (null),
+					h => h.OnCollapsedHandler -= value);
+			}
+		}
 	}
 
 	internal class FlurryAdNativeListener : Java.Lang.Object, IFlurryAdNativeListener
@@ -136,6 +170,8 @@ namespace Flurry.Ads
 		public EventHandler OnFetchedHandler;
 		public EventHandler OnShowFullscreenHandler;
 		public EventHandler OnImpressionLoggedHandler;
+		public EventHandler OnExpandedHandler;
+		public EventHandler OnCollapsedHandler;
 
 		public void OnAppExit (FlurryAdNative adNative)
 		{
@@ -186,6 +222,20 @@ namespace Flurry.Ads
 				handler (adNative, EventArgs.Empty);
 		}
 
+		public void OnExpanded (FlurryAdNative adNative)
+		{
+			var handler = OnExpandedHandler;
+			if (handler != null)
+				handler (adNative, EventArgs.Empty);
+		}
+
+		public void OnCollapsed (FlurryAdNative adNative)
+		{
+			var handler = OnCollapsedHandler;
+			if (handler != null)
+				handler (adNative, EventArgs.Empty);
+		}
+
 		public static bool IsEmpty (FlurryAdNativeListener value)
 		{
 			return 
@@ -195,7 +245,9 @@ namespace Flurry.Ads
 				value.OnErrorHandler == null &&
 				value.OnFetchedHandler == null &&
 				value.OnShowFullscreenHandler == null &&
-				value.OnImpressionLoggedHandler == null;
+				value.OnImpressionLoggedHandler == null &&
+				value.OnExpandedHandler == null &&
+				value.OnCollapsedHandler == null;
 		}
 	}
 }

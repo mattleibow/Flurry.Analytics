@@ -38,20 +38,20 @@ using UIKit;
 //	[BaseType (typeof(NSObject), Name = "FlurryTextShareParameters")]
 //	interface FlurryTextShareParameters : FlurryTumblrShareParameters
 //	{
-//		[Export ("text", ArgumentSemantic.Retain)]
+//		[Export ("text", ArgumentSemantic.Strong)]
 //		string Text { get; set; }
 //
-//		[Export ("title", ArgumentSemantic.Retain)]
+//		[Export ("title", ArgumentSemantic.Strong)]
 //		string Title { get; set; }
 //	}
 //
 //	[BaseType (typeof(NSObject), Name = "FlurryImageShareParameters")]
 //	interface FlurryImageShareParameters : FlurryTumblrShareParameters
 //	{
-//		[Export ("imageURL", ArgumentSemantic.Retain)]
+//		[Export ("imageURL", ArgumentSemantic.Strong)]
 //		string ImageUrl { get; set; }
 //
-//		[Export ("imageCaption", ArgumentSemantic.Retain)]
+//		[Export ("imageCaption", ArgumentSemantic.Strong)]
 //		string ImageCaption { get; set; }
 //	}
 //
@@ -61,6 +61,9 @@ using UIKit;
 //		[Static, Export ("setConsumerKey:consumerSecret:")]
 //		void SetConsumerKey (string consumerKey, string consumerSecret);
 //
+//		[Static, Export ("setConsumerKey:consumerSecret:consumerScheme:")]
+//		void SetConsumerKey (string consumerKey, string consumerSecret, string urlScheme);
+//
 //		[Static, Export ("post:presentingViewController:")]
 //		void Post (IFlurryTumblrShareParameters parameters, UIViewController presentingController);
 //
@@ -69,5 +72,8 @@ using UIKit;
 //
 //		[Static, Export ("tumblrLogo")]
 //		UIImage TumblrLogo { get; }
+//
+//		[Static, Export ("handleURL:")]
+//		bool HandleUrl (NSUrl url);
 //	}
 //}

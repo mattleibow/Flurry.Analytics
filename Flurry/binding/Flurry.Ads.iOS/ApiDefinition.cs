@@ -14,13 +14,13 @@ namespace Flurry.Ads {
 		[Static, Export ("targeting")]
 		FlurryAdTargeting Targeting { get; }
 
-		[Export ("location", ArgumentSemantic.Retain)]
+		[Export ("location", ArgumentSemantic.Strong)]
 		CLLocation Location { get; set; }
 
-		[Export ("userCookies", ArgumentSemantic.Retain)]
+		[Export ("userCookies", ArgumentSemantic.Strong)]
 		NSDictionary UserCookies { get; set; }
 
-		[Export ("keywords", ArgumentSemantic.Retain)]
+		[Export ("keywords", ArgumentSemantic.Strong)]
 		NSDictionary Keywords { get; set; }
 
 		[Export ("testAdsEnabled")]
@@ -210,10 +210,10 @@ namespace Flurry.Ads.Banner {
 		[Export ("space")]
 		string Space { get; set; }
 
-		[Export ("targeting", ArgumentSemantic.Retain)]
+		[Export ("targeting", ArgumentSemantic.Strong)]
 		FlurryAdTargeting Targeting { get; set; }
 
-		[NullAllowed, Export ("adDelegate", ArgumentSemantic.Assign)]
+		[NullAllowed, Export ("adDelegate", ArgumentSemantic.Weak)]
 		IFlurryAdBannerDelegate AdDelegate { get; set; }
 
 		[Export ("ready")]
@@ -275,10 +275,10 @@ namespace Flurry.Ads.Interstitial {
 		[Export ("space")]
 		string Space { get; }
 
-		[Export ("targeting", ArgumentSemantic.Retain)]
+		[Export ("targeting", ArgumentSemantic.Strong)]
 		FlurryAdTargeting Targeting { get; set; }
 
-		[NullAllowed, Export ("adDelegate", ArgumentSemantic.Assign)]
+		[NullAllowed, Export ("adDelegate", ArgumentSemantic.Weak)]
 		IFlurryAdInterstitialDelegate AdDelegate { get; set; }
 
 		[Export ("ready")]
@@ -300,13 +300,13 @@ namespace Flurry.Ads.Native {
 	[BaseType (typeof(NSObject), Name = "FlurryAdNativeAsset")]
 	interface FlurryAdNativeAsset
 	{
-		[Export ("name", ArgumentSemantic.Retain)]
+		[Export ("name", ArgumentSemantic.Strong)]
 		string Name { get; }
 
 		[Export ("type")]
 		AssetType Type { get; }
 
-		[Export ("value", ArgumentSemantic.Retain)]
+		[Export ("value", ArgumentSemantic.Strong)]
 		string Value { get; }
 
 		[Export ("width")]
@@ -345,15 +345,18 @@ namespace Flurry.Ads.Native {
 
 		[Export ("adNativeDidLogImpression:"), EventArgs("DidLogImpression")]
 		void DidLogImpression (FlurryAdNative nativeAd);
+
+		[Export ("adNativeExpandToggled:"), EventArgs("DidToggleExpand")]
+		void DidToggleExpand (FlurryAdNative nativeAd);
 	}
 
 	[BaseType (typeof(NSObject), Name = "FlurryAdNative", Delegates = new[] { "AdDelegate" }, Events = new[] { typeof (FlurryAdNativeDelegate) })]
 	interface FlurryAdNative
 	{
-		[Export ("space")]
+		[Export ("space", ArgumentSemantic.Copy)]
 		string Space { get; }
 
-		[NullAllowed, Export ("adDelegate", ArgumentSemantic.Assign)]
+		[NullAllowed, Export ("adDelegate", ArgumentSemantic.Weak)]
 		IFlurryAdNativeDelegate AdDelegate { get; set; }
 
 		[Export ("ready")]
@@ -362,19 +365,22 @@ namespace Flurry.Ads.Native {
 		[Export ("expired")]
 		bool IsExpired { get; }
 
-		[Export ("assetList")]
+		[Export ("displayState")]
+		NativeAdDisplayState DisplayState { get; set; }
+
+		[Export ("assetList", ArgumentSemantic.Strong)]
 		NSObject[] AssetList { get; }
 
-		[Export ("trackingView", ArgumentSemantic.Retain)]
+		[Export ("trackingView", ArgumentSemantic.Strong)]
 		UIView TrackingView { get; set; }
 
-		[Export ("viewControllerForPresentation", ArgumentSemantic.Retain)]
+		[Export ("viewControllerForPresentation", ArgumentSemantic.Strong)]
 		UIViewController PresentationViewController { get; set; }
 
-		[Export ("videoViewContainer", ArgumentSemantic.Retain)]
+		[Export ("videoViewContainer", ArgumentSemantic.Strong)]
 		UIView VideoViewContainer { get; set; }
 
-		[Export ("targeting", ArgumentSemantic.Retain)]
+		[Export ("targeting", ArgumentSemantic.Strong)]
 		FlurryAdTargeting Targeting { get; set; }
 
 		[Export ("initWithSpace:")]
@@ -391,6 +397,12 @@ namespace Flurry.Ads.Native {
 
 		[Export ("isVideoAd")]
 		bool IsVideoAd { get; }
+
+		[Export ("setPencilViewToTrack:withExpandButton:andCTAButton:")]
+		void SetPencilViewToTrack (UIView pencilView, UIButton expandButton, [NullAllowed] UIButton ctaButton);
+
+		[Export ("setExpandedViewToTrack:withExpandButton:andCTAButton:")]
+		void SetExpandedViewToTrack (UIView expandedView, UIButton expandButton, [NullAllowed] UIButton ctaButton);
 	}
 
 //	[BaseType (typeof(NSObject), Name = "FlurryAdNativeStyle")]

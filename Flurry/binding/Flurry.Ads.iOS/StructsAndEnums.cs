@@ -36,6 +36,12 @@ namespace Flurry.Ads {
 
 namespace Flurry.Ads.Native {
 
+	public enum NativeAdDisplayState : uint
+	{
+		Collapsed = 0,
+		Expanded
+	}
+
 	public enum AssetType : uint
 	{
 		String = 0,
