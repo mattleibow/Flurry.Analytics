@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
     <metadata>
         <id>Flurry.Ads</id>
-        <version>2.0.0</version>
+        <version>2.1.0</version>
         <title>Flurry Ads (Yahoo App Publishing)</title>
         <authors>Matthew Leibowitz</authors>
         <licenseUrl>https://github.com/mattleibow/Flurry.Analytics/blob/master/License.md</licenseUrl>
@@ -14,10 +14,10 @@
         <tags>flurry,ads,publisher,advertising,xamarin,ios,android,mobile</tags>
         <dependencies>
             <group targetFramework="XamariniOS1.0">
-                <dependency id="Flurry.Analytics" version="2.0.0" />
+                <dependency id="Flurry.Analytics" version="2.1.0" />
             </group>
             <group targetFramework="MonoAndroid1.0">
-                <dependency id="Flurry.Analytics" version="2.0.0" />
+                <dependency id="Flurry.Analytics" version="2.1.0" />
             </group>
         </dependencies>        
     </metadata>

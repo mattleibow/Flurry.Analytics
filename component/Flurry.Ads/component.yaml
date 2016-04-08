@@ -3,7 +3,7 @@ name: Flurry Ads (Yahoo App Publishing)
 publisher: Matthew Leibowitz
 publisher-url: http://www.twitter.com/mattleibow
 summary: Yahoo App Publishing provides a flexible ad-serving platform that is easy to set up and use, enabling you to maximize your ad revenue.
-version: 2.0.0
+version: 2.1.0
 src-url: https://github.com/mattleibow/Flurry.Analytics
 
 details: Details.md
@@ -13,8 +13,8 @@ getting-started: GettingStarted.md
 is_shell: true
 no_build: true
 packages:
-  android: Flurry.Ads, Version=2.0.0
-  ios-unified: Flurry.Ads, Version=2.0.0
+  android: Flurry.Ads, Version=2.1.0
+  ios-unified: Flurry.Ads, Version=2.1.0
 local-nuget-repo: ../../nuget/
 
 icons: 

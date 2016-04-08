@@ -3,7 +3,7 @@ name: Flurry Analytics Plugin
 publisher: Matthew Leibowitz
 publisher-url: http://www.twitter.com/mattleibow
 summary: The Flurry Analytics SDK provides you with the tools and resources you need to gain a deep level of understanding about your users’ behavior in your apps.
-version: 2.0.0
+version: 2.1.0
 src-url: https://github.com/mattleibow/Flurry.Analytics
 
 details: Details.md
@@ -13,9 +13,9 @@ getting-started: GettingStarted.md
 is_shell: true
 no_build: true
 packages:
-  winphone-8.0: Flurry.Analytics.Portable, Version=2.0.0
-  android: Flurry.Analytics.Portable, Version=2.0.0
-  ios-unified: Flurry.Analytics.Portable, Version=2.0.0
+  winphone-8.0: Flurry.Analytics.Portable, Version=2.1.0
+  android: Flurry.Analytics.Portable, Version=2.1.0
+  ios-unified: Flurry.Analytics.Portable, Version=2.1.0
 local-nuget-repo: ../../nuget/
 
 icons: 
