@@ -1,0 +1,39 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Flurry.Analytics.iOS", "Flurry\binding\Flurry.Analytics.iOS\Flurry.Analytics.iOS.csproj", "{3817227C-4052-458B-9D6E-F0A747E81D2A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Flurry.Ads.iOS", "Flurry\binding\Flurry.Ads.iOS\Flurry.Ads.iOS.csproj", "{3817227C-4052-458B-9D6E-F0A747E81D2C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Flurry.Analytics.Portable", "Portable\library\Flurry.Analytics.Portable\Flurry.Analytics.Portable.csproj", "{4FFED8D8-634A-4569-B8DC-8771EC93790E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Flurry.Analytics.Portable.iOS", "Portable\library\Flurry.Analytics.Portable.iOS\Flurry.Analytics.Portable.iOS.csproj", "{3DC22A66-0C33-4869-8A6A-D0F6D58D1AEB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3817227C-4052-458B-9D6E-F0A747E81D2A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3817227C-4052-458B-9D6E-F0A747E81D2A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3817227C-4052-458B-9D6E-F0A747E81D2A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3817227C-4052-458B-9D6E-F0A747E81D2A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4FFED8D8-634A-4569-B8DC-8771EC93790E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4FFED8D8-634A-4569-B8DC-8771EC93790E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4FFED8D8-634A-4569-B8DC-8771EC93790E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4FFED8D8-634A-4569-B8DC-8771EC93790E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3817227C-4052-458B-9D6E-F0A747E81D2C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3817227C-4052-458B-9D6E-F0A747E81D2C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3817227C-4052-458B-9D6E-F0A747E81D2C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3817227C-4052-458B-9D6E-F0A747E81D2C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3DC22A66-0C33-4869-8A6A-D0F6D58D1AEB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3DC22A66-0C33-4869-8A6A-D0F6D58D1AEB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3DC22A66-0C33-4869-8A6A-D0F6D58D1AEB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3DC22A66-0C33-4869-8A6A-D0F6D58D1AEB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

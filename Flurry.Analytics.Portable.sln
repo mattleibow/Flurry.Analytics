@@ -11,8 +11,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Flurry.Analytics.Portable.i
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Flurry.Analytics.Portable.WindowsPhone", "Portable\library\Flurry.Analytics.Portable.WindowsPhone\Flurry.Analytics.Portable.WindowsPhone.csproj", "{7210B4CF-492C-4B6A-8968-3485C6D8EFF7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Flurry.Analytics.Portable.Portable", "Portable\library\Flurry.Analytics.Portable.Portable\Flurry.Analytics.Portable.Portable.csproj", "{4FFED8D8-634A-4569-B8DC-8771EC93790F}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Binding", "Binding", "{2D920A65-D004-48C9-BA43-5E4FE3D90D99}"
 	ProjectSection(SolutionItems) = preProject
 		Flurry\binding\Flurry.Analytics.WP8\FlurryWP8SDK.dll = Flurry\binding\Flurry.Analytics.WP8\FlurryWP8SDK.dll
@@ -56,14 +54,6 @@ Global
 		{4FFED8D8-634A-4569-B8DC-8771EC93790E}.Release|Any CPU.Build.0 = Release|Any CPU
 		{4FFED8D8-634A-4569-B8DC-8771EC93790E}.Release|ARM.ActiveCfg = Release|Any CPU
 		{4FFED8D8-634A-4569-B8DC-8771EC93790E}.Release|x86.ActiveCfg = Release|Any CPU
-		{4FFED8D8-634A-4569-B8DC-8771EC93790F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{4FFED8D8-634A-4569-B8DC-8771EC93790F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{4FFED8D8-634A-4569-B8DC-8771EC93790F}.Debug|ARM.ActiveCfg = Debug|Any CPU
-		{4FFED8D8-634A-4569-B8DC-8771EC93790F}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{4FFED8D8-634A-4569-B8DC-8771EC93790F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{4FFED8D8-634A-4569-B8DC-8771EC93790F}.Release|Any CPU.Build.0 = Release|Any CPU
-		{4FFED8D8-634A-4569-B8DC-8771EC93790F}.Release|ARM.ActiveCfg = Release|Any CPU
-		{4FFED8D8-634A-4569-B8DC-8771EC93790F}.Release|x86.ActiveCfg = Release|Any CPU
 		{537319CA-4CD0-4271-A3B3-157E41B877B3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{537319CA-4CD0-4271-A3B3-157E41B877B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{537319CA-4CD0-4271-A3B3-157E41B877B3}.Debug|ARM.ActiveCfg = Debug|Any CPU
