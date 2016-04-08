@@ -11,7 +11,7 @@ using MonoTouch.ObjCRuntime;
 [assembly: LinkerSafe]
 	
 [assembly: LinkWith (
-	"libFlurry_7.5.1.a", 
+	"libFlurry_7.6.0.a", 
 	LinkTarget.Simulator | LinkTarget.Simulator64 | LinkTarget.ArmV7 | LinkTarget.Arm64,
 	ForceLoad = true, 
 	SmartLink = true,
