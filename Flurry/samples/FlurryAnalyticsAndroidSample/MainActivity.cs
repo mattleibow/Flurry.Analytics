@@ -27,10 +27,10 @@ namespace FlurryAnalyticsAndroidSample
 			LogEventButton.Click += delegate {
 				FlurryEventRecordStatus status;
 				if (string.IsNullOrEmpty (EventParameterText.Text))
-					status = FlurryAgent.LogEvent ("Button Click");
+					status = FlurryAgent.LogEvent ("ButtonClick");
 				else
-					status = FlurryAgent.LogEvent ("Button Click", new Dictionary<string, string> { 
-						{ "Log Parameter", EventParameterText.Text } 
+					status = FlurryAgent.LogEvent ("ButtonClick", new Dictionary<string, string> { 
+						{ "LogParameter", EventParameterText.Text } 
 					});
 
 				using (Toast alert = Toast.MakeText (this, "Your event was logged along with the specified parameter. Result: " + status, ToastLength.Short))

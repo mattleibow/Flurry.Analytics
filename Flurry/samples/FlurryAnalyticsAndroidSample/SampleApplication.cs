@@ -23,6 +23,7 @@ namespace FlurryAnalyticsAndroidSample
 		{
 			base.OnCreate ();
 
+			FlurryAgent.SetReportLocation (true);
 			FlurryAgent.SetLogEnabled (true);
 			FlurryAgent.SetLogEvents (true);
 			FlurryAgent.SetLogLevel (LogPriority.Verbose);
