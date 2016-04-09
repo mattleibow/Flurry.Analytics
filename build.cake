@@ -266,12 +266,13 @@ Task("PackageComponent")
     PackageComponent("./component/Flurry.Ads/", new XamarinComponentSettings { 
         ToolPath = XamarinComponentPath 
     });
-    DeleteFiles("./component/Flurry.Analytics/*.xam");
-    PackageComponent("./component/Flurry.Analytics/", new XamarinComponentSettings { 
+    DeleteFiles("./component/Flurry.Analytics.Portable/*.xam");
+    PackageComponent("./component/Flurry.Analytics.Portable/", new XamarinComponentSettings { 
         ToolPath = XamarinComponentPath 
     });
     DeleteFiles("./output/*.xam");
     MoveFiles("./component/Flurry.Ads/*.xam", outDir);
+    MoveFiles("./component/Flurry.Analytics.Portable/*.xam", outDir);
 });
 
 Task("Package")
