@@ -156,6 +156,7 @@ Task("RestorePackages")
         "./Flurry/samples/FlurryAdsiOSSample/FlurryAdsiOSSample.sln",
         "./Flurry/samples/FlurryAnalyticsAndroidSample/FlurryAnalyticsAndroidSample.sln",
         "./Flurry/samples/FlurryAnalyticsiOSSample/FlurryAnalyticsiOSSample.sln",
+        "./Flurry/samples/FlurryAnalyticstvOSSample/FlurryAnalyticstvOSSample.sln",
         "./Flurry/samples/FlurryAnalyticsWindowsPhoneSample/FlurryAnalyticsWindowsPhoneSample.sln",
         "./Portable/samples/Flurry.Analytics.Portable.Samples.sln",
     };
@@ -204,6 +205,7 @@ Task("Build")
     if (ForMac) {
         outputs.Add("./Flurry/binding/Flurry.Ads.iOS/bin/{0}/Flurry.Ads.iOS.dll", "ios-unified");
         outputs.Add("./Flurry/binding/Flurry.Analytics.iOS/bin/{0}/Flurry.Analytics.iOS.dll", "ios-unified");
+        outputs.Add("./Flurry/binding/Flurry.Analytics.tvOS/bin/{0}/Flurry.Analytics.tvOS.dll", "tvos");
         outputs.Add("./Portable/library/Flurry.Analytics.Portable.iOS/bin/{0}/Flurry.Analytics.Portable.dll", "ios-unified");
         outputs.Add("./Portable/library/Flurry.Analytics.Portable.iOS/bin/{0}/Flurry.Analytics.Portable.xml", "ios-unified");
     }
@@ -233,6 +235,7 @@ Task("BuildSamples")
     if (ForMac) {
         Build("./Flurry/samples/FlurryAdsiOSSample/FlurryAdsiOSSample.sln");
         Build("./Flurry/samples/FlurryAnalyticsiOSSample/FlurryAnalyticsiOSSample.sln");
+        Build("./Flurry/samples/FlurryAnalyticstvOSSample/FlurryAnalyticstvOSSample.sln");
     }
 });
 

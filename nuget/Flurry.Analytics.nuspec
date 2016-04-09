@@ -11,11 +11,12 @@
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
         <description>The Flurry Analytics SDK provides you with the tools and resources you need to gain a deep level of understanding about your users’ behavior in your apps. Set up advanced analysis of complex events, with metrics, segments and funnels to better track your users’ habits and performance.</description>
         <copyright>Flurry, Inc. and .NET Development Addict</copyright>
-        <tags>flurry,analytics,xamarin,ios,windows phone,android,mobile</tags>
+        <tags>flurry,analytics,xamarin,ios,tvos,windows phone,android,mobile</tags>
     </metadata>
     <files>
         <file src="output/android/Flurry.Analytics.Android.dll" target="lib\MonoAndroid10\Flurry.Analytics.Android.dll" />
         <file src="output/ios-unified/Flurry.Analytics.iOS.dll" target="lib\Xamarin.iOS10\Flurry.Analytics.iOS.dll" />
+        <file src="output/tvos/Flurry.Analytics.tvOS.dll" target="lib\Xamarin.tvOS\Flurry.Analytics.tvOS.dll" />
         <file src="output/wp8/FlurryWP8SDK.dll" target="lib\wp8\FlurryWP8SDK.dll" />
     </files>
 </package>
