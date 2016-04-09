@@ -22,7 +22,7 @@
         </dependencies>        
     </metadata>
     <files>
-        <file src="..\Flurry\binding\Flurry.Ads.Android\bin\Release\Flurry.Ads.Android.dll" target="lib\MonoAndroid10\Flurry.Ads.Android.dll" />
-        <file src="..\Flurry\binding\Flurry.Ads.iOS\bin\Release\Flurry.Ads.iOS.dll" target="lib\Xamarin.iOS10\Flurry.Ads.iOS.dll" />
+        <file src="output/android/Flurry.Ads.Android.dll" target="lib\MonoAndroid10\Flurry.Ads.Android.dll" />
+        <file src="output/ios-unified/Flurry.Ads.iOS.dll" target="lib\Xamarin.iOS10\Flurry.Ads.iOS.dll" />
     </files>
 </package>

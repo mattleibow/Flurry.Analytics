@@ -14,8 +14,8 @@
         <tags>flurry,analytics,xamarin,ios,windows phone,android,mobile</tags>
     </metadata>
     <files>
-        <file src="..\Flurry\binding\Flurry.Analytics.Android\bin\Release\Flurry.Analytics.Android.dll" target="lib\MonoAndroid10\Flurry.Analytics.Android.dll" />
-        <file src="..\Flurry\binding\Flurry.Analytics.iOS\bin\Release\Flurry.Analytics.iOS.dll" target="lib\Xamarin.iOS10\Flurry.Analytics.iOS.dll" />
-        <file src="..\Flurry\binding\Flurry.Analytics.WP8\FlurryWP8SDK.dll" target="lib\wp8\FlurryWP8SDK.dll" />
+        <file src="output/android/Flurry.Analytics.Android.dll" target="lib\MonoAndroid10\Flurry.Analytics.Android.dll" />
+        <file src="output/ios-unified/Flurry.Analytics.iOS.dll" target="lib\Xamarin.iOS10\Flurry.Analytics.iOS.dll" />
+        <file src="output/wp8/FlurryWP8SDK.dll" target="lib\wp8\FlurryWP8SDK.dll" />
     </files>
 </package>

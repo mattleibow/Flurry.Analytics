@@ -16,7 +16,7 @@ packages:
   winphone-8.0: Flurry.Analytics.Portable, Version=2.1.0
   android: Flurry.Analytics.Portable, Version=2.1.0
   ios-unified: Flurry.Analytics.Portable, Version=2.1.0
-local-nuget-repo: ../../nuget/
+local-nuget-repo: ../../output/
 
 icons: 
   - ../../icons/flurry-analytics_128x128.png
