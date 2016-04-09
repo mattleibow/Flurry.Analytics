@@ -1,3 +1,7 @@
+[![Build Status][t-img]][t-link]  [![Build status][a-img]][a-link]  
+
+[![NuGet][n1-img]][n1-link]  [![NuGet][n2-img]][n2-link]  [![NuGet][n3-img]][n3-link]
+
 The Flurry Analytics Agent allows you to track the usage and behavior of your Android, iOS or Windows Phone application on users' phones for viewing in the Flurry Analytics system. It is designed to be as easy as possible with a basic setup complete in few minutes.
 
 ## Features
@@ -42,4 +46,15 @@ Flurry Analytics SDK supported versions:
 * SDK for iOS supports **iOS 5** and above
 * SDK for Android supports **Android API level 10** (Gingerbread) and above
 * SDK for Windows Phone supports **Windows Phone 8 (Silverlight)** and above
-* 
+
+
+[t-img]: https://travis-ci.org/mattleibow/Flurry.Analytics.svg?branch=master
+[t-link]: https://travis-ci.org/mattleibow/Flurry.Analytics
+[a-img]: https://ci.appveyor.com/api/projects/status/ev8b4mc5qxothjwi/branch/master?svg=true
+[a-link]: https://ci.appveyor.com/project/mattleibow/Flurry.Analytics
+[n1-img]: https://img.shields.io/nuget/v/Flurry.Ads.svg?label=Flurry.Ads
+[n1-link]: https://www.nuget.org/packages/Flurry.Ads/
+[n2-img]: https://img.shields.io/nuget/v/Flurry.Analytics.svg?label=Flurry.Analytics
+[n2-link]: https://www.nuget.org/packages/Flurry.Analytics/
+[n3-img]: https://img.shields.io/nuget/v/Flurry.Analytics.Portable.svg?label=Flurry.Analytics.Portable
+[n3-link]: https://www.nuget.org/packages/Flurry.Analytics.Portable/
