@@ -25,6 +25,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Flurry.Analytics.Portable.i
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Flurry.Analytics.Portable.WindowsPhone", "Portable\library\Flurry.Analytics.Portable.WindowsPhone\Flurry.Analytics.Portable.WindowsPhone.csproj", "{7210B4CF-492C-4B6A-8968-3485C6D8EFF7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Flurry.Analytics.tvOS", "Flurry\binding\Flurry.Analytics.tvOS\Flurry.Analytics.tvOS.csproj", "{2ED8C18E-02DF-4228-A366-12B361219C1E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -63,6 +65,10 @@ Global
 		{9299037E-E0AB-4B1A-A58E-262BDD04EED4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9299037E-E0AB-4B1A-A58E-262BDD04EED4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9299037E-E0AB-4B1A-A58E-262BDD04EED4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2ED8C18E-02DF-4228-A366-12B361219C1E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2ED8C18E-02DF-4228-A366-12B361219C1E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2ED8C18E-02DF-4228-A366-12B361219C1E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2ED8C18E-02DF-4228-A366-12B361219C1E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{537319CA-4CD0-4271-A3B3-157E41B877B3} = {C2205106-DB2F-4B93-80D6-C677CB3137C6}

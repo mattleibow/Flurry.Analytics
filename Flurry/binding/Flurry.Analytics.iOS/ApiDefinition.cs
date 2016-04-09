@@ -1,6 +1,9 @@
 using System;
 
 using Foundation;
+#if __TVOS__
+using JavaScriptCore;
+#endif
 
 namespace Flurry.Analytics {
 
@@ -31,6 +34,16 @@ namespace Flurry.Analytics {
 		[Static, Export ("setAppVersion:")]
 		void SetAppVersion (string version);
 
+#if __TVOS__
+
+		[Static, Export ("setTVEventFlushCount:")]
+		void SetTVEventFlushCount (short count);
+
+		[Static, Export ("setTVSessionReportingInterval:")]
+		void SetTVSessionReportingInterval (short duration);
+
+#endif
+
 		[Static, Export ("getFlurryAgentVersion")]
 		string FlurryAgentVersion { get; }
 
@@ -46,8 +59,12 @@ namespace Flurry.Analytics {
 		[Static, Export ("setSessionContinueSeconds:")]
 		void SetSessionContinueSeconds (int seconds);
 
+#if !__TVOS__
+
 		[Static, Export ("setCrashReportingEnabled:")]
 		void SetCrashReportingEnabled (bool enabled);
+
+#endif
 
 		[Static, Export ("startSession:")]
 		void StartSession (string apiKey);
@@ -61,8 +78,12 @@ namespace Flurry.Analytics {
 		[Static, Export("getSessionID")]
 		string SessionId { get; }
 
+#if !__TVOS__
+
 		[Static, Export ("pauseBackgroundSession")]
 		void PauseBackgroundSession ();
+
+#endif
 
 		[Static, Export ("addSessionOrigin:withDeepLink:")]
 		void AddSessionOrigin (string sessionOriginName, string deepLink);
@@ -100,6 +121,8 @@ namespace Flurry.Analytics {
 		[Static, Export ("endTimedEvent:withParameters:")]
 		void EndTimedEvent (string eventName, [NullAllowed] NSDictionary parameters);
 
+#if !__TVOS__
+
 		[Obsolete("Use LogAllPageViewsForTarget instead.")]
 		[Static, Export ("logAllPageViews:")]
 		void LogAllPageViews (NSObject target);
@@ -112,6 +135,8 @@ namespace Flurry.Analytics {
 
 		[Static, Export ("logPageView")]
 		void LogPageView ();
+
+#endif
 
 		[Static, Export ("setUserID:")]
 		void SetUserId (string userId);
@@ -137,11 +162,22 @@ namespace Flurry.Analytics {
 		[Static, Export ("setEventLoggingEnabled:")]
 		void SetEventLoggingEnabled (bool enabled);
 
+#if !__TVOS__
+
 		[Static, Export("setPulseEnabled:")]
 		void SetPulseEnabled (bool enabled);
 
+#endif
+
 		[Static, Export ("logEvent:syndicationID:parameters:")]
 		FlurryEventRecordStatus LogEvent (FlurrySyndicationEvent syndicationEvent, string syndicationID, NSDictionary parameters);
+
+#if __TVOS__
+
+		[Static, Export ("registerJSContextWithContext:")]
+		void RegisterJSContextWithContext (JSContext jscontext);
+
+#endif
 	}
 
 	[BaseType (typeof (NSObject), Name = "FlurryWatch")]

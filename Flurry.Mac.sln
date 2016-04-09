@@ -10,6 +10,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Flurry.Analytics.Portable",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Flurry.Analytics.Portable.iOS", "Portable\library\Flurry.Analytics.Portable.iOS\Flurry.Analytics.Portable.iOS.csproj", "{3DC22A66-0C33-4869-8A6A-D0F6D58D1AEB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Flurry.Analytics.tvOS", "Flurry\binding\Flurry.Analytics.tvOS\Flurry.Analytics.tvOS.csproj", "{2ED8C18E-02DF-4228-A366-12B361219C1E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -32,6 +34,10 @@ Global
 		{3DC22A66-0C33-4869-8A6A-D0F6D58D1AEB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3DC22A66-0C33-4869-8A6A-D0F6D58D1AEB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3DC22A66-0C33-4869-8A6A-D0F6D58D1AEB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2ED8C18E-02DF-4228-A366-12B361219C1E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2ED8C18E-02DF-4228-A366-12B361219C1E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2ED8C18E-02DF-4228-A366-12B361219C1E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2ED8C18E-02DF-4228-A366-12B361219C1E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
