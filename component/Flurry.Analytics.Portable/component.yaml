@@ -24,7 +24,7 @@ icons:
 
 samples: 
   - name: Flurry Analytics Plugin Sample (MVVM Cross)
-    path: ../../Portable/samples/MvvmCrossSample/Flurry.Analytics.Portable.Samples.sln
+    path: ../../Portable/samples/Flurry.Analytics.Portable.Samples.sln
     installNuGets:
       - project: MvvmCrossSample.Core
         packages:
