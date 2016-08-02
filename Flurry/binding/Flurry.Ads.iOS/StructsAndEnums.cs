@@ -2,11 +2,11 @@
 
 namespace Flurry.Ads {
 	
-//	public enum FlGender : uint
-//	{
-//		Male = 1,
-//		Female = 2
-//	}
+	public enum FlGender : uint
+	{
+		Male = 1,
+		Female = 2
+	}
 
 	public enum AdError : uint
 	{

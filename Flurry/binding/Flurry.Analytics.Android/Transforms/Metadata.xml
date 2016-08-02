@@ -7,7 +7,6 @@
 
   <!-- use C# namespaces -->
   <attr path="/api/package[@name='com.flurry.android']" name="managedName">Flurry.Analytics</attr>
-  <attr path="/api/package[@name='com.flurry.android.tumblr']" name="managedName">Flurry.Tumblr</attr>
 
   <!-- hide internal members -->
   <attr path="/api/package[@name='com.flurry.android']/class[@name='FlurryAgent']/method[@name='setGender']" name="visibility">internal</attr>
@@ -24,7 +23,4 @@
   <attr path="/api/package[@name='com.flurry.android']/class[@name='FlurryEventRecordStatus']/field[@name='kFlurryEventRecorded']" name="managedName">Recorded</attr>
   <attr path="/api/package[@name='com.flurry.android']/class[@name='FlurryEventRecordStatus']/field[@name='kFlurryEventUniqueCountExceeded']" name="managedName">UniqueCountExceeded</attr>
 
-  <!-- the Tumblr bit is not ready -->
-  <remove-node path="/api/package[@name='com.flurry.android.tumblr']" />
-  
 </metadata>

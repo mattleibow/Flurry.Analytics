@@ -6,10 +6,6 @@
 	<string>FlurryAnalyticsiOSSample</string>
 	<key>CFBundleIdentifier</key>
 	<string>com.yourcompany.flurryanalyticsiossample</string>
-	<key>CFBundleShortVersionString</key>
-	<string>1.0</string>
-	<key>CFBundleVersion</key>
-	<string>1.0</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>MinimumOSVersion</key>
@@ -39,5 +35,11 @@
 	<string>Resources/Images.xcassets/AppIcons.appiconset</string>
 	<key>XSLaunchImageAssets</key>
 	<string>Resources/Images.xcassets/LaunchImage.launchimage</string>
+	<key>CFBundleName</key>
+	<string>FlurryAnalyticsiOSSample</string>
+	<key>CFBundleShortVersionString</key>
+	<string>7.6.6</string>
+	<key>CFBundleVersion</key>
+	<string>7.6.6</string>
 </dict>
 </plist>

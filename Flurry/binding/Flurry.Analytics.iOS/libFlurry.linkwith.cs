@@ -15,7 +15,7 @@ using MonoTouch.ObjCRuntime;
 	"libFlurrytvOS_1.0.0.a",
 	LinkTarget.Simulator64 | LinkTarget.Arm64,
 #else
-	"libFlurry_7.6.0.a", 
+	"libFlurry_7.6.6.a", 
 	LinkTarget.Simulator | LinkTarget.Simulator64 | LinkTarget.ArmV7 | LinkTarget.Arm64,
 #endif
 	ForceLoad = true, 

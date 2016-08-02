@@ -1,6 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="603000" android:versionName="6.3.0" package="com.yourcompany.flurryanalyticssample">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="604020" android:versionName="6.4.2" package="com.yourcompany.flurryanalyticssample">
 	<uses-sdk android:minSdkVersion="10" android:targetSdkVersion="23" />
-	<application android:label="Flurry.Analytics.Sample" android:icon="@drawable/icon">
-	</application>
+	<application android:label="Flurry.Analytics.Sample" android:icon="@drawable/icon"></application>
 </manifest>

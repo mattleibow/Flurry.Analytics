@@ -32,4 +32,7 @@
   <attr path="/api/package[@name='com.flurry.android.ads']/interface[@name='FlurryAdBannerListener']/method" name="eventName"></attr>
   <attr path="/api/package[@name='com.flurry.android.ads']/interface[@name='FlurryAdNativeListener']/method" name="eventName"></attr>
 
+  <!-- Tumblr -->
+  <attr path="/api/package[@name='com.flurry.android.tumblr']" name="managedName">Flurry.Tumblr</attr>
+
 </metadata>
