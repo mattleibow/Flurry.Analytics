@@ -1,8 +1,8 @@
-#tool nuget:?package=XamarinComponent
+#tool nuget:?package=XamarinComponent&version=1.1.0.41
 
-#addin nuget:?package=Octokit
-#addin nuget:?package=Cake.Xamarin
-#addin nuget:?package=Cake.FileHelpers
+#addin nuget:?package=Octokit&version=0.21.1
+#addin nuget:?package=Cake.Xamarin&version=1.3.0.3
+#addin nuget:?package=Cake.FileHelpers&version=1.0.3.2
 
 using System.Net;
 using Octokit;
@@ -33,6 +33,7 @@ Information("Building target '{0}' for {1}.", target, ForEverywhere ? "everywher
 
 // the tools
 FilePath XamarinComponentPath = "./tools/XamarinComponent/tools/xamarin-component.exe";
+FilePath NuGetPath = "./tools/nuget.exe";
 
 // the output folder
 DirectoryPath outDir = "./output/";
@@ -167,7 +168,8 @@ Task("RestorePackages")
         });
         NuGetRestore(solution, new NuGetRestoreSettings {
             Source = NuGetSource,
-            Verbosity = NuGetVerbosity.Detailed
+            Verbosity = NuGetVerbosity.Detailed,
+            ToolPath = NuGetPath
         });
     }
 });
@@ -254,6 +256,7 @@ Task("PackageNuGet")
             OutputDirectory = outDir,
             Verbosity = NuGetVerbosity.Detailed,
             BasePath = IsRunningOnUnix() ? "././" : "./",
+            ToolPath = NuGetPath
         });
     }
 });
@@ -305,7 +308,7 @@ Task("DownloadArtifacts")
         client.Credentials = new Credentials(GitHubToken);
         
         Information("Loading releases...");
-        var releases = client.Release.GetAll(GitHubUser, GitHubRepository).Result;
+        var releases = client.Repository.Release.GetAll(GitHubUser, GitHubRepository).Result;
         var releaseId = releases.Single(r => r.TagName == GitHubBuildTag).Id;
         
         Information("Loading CI release...");
@@ -313,7 +316,7 @@ Task("DownloadArtifacts")
         ReleaseAsset asset = null;
         var waitSeconds = 0;
         while (asset == null) {
-            release = client.Release.Get(GitHubUser, GitHubRepository, releaseId).Result;
+            release = client.Repository.Release.Get(GitHubUser, GitHubRepository, releaseId).Result;
             Information("Loading asset...");
             asset = release.Assets.SingleOrDefault(a => a.Name == TemporaryArtifactsFilename);
             if (asset == null) {
@@ -361,18 +364,18 @@ Task("UploadArtifacts")
     client.Credentials = new Credentials(GitHubToken);
 
     Information("Loading releases...");
-    var releases = client.Release.GetAll(GitHubUser, GitHubRepository).Result;
+    var releases = client.Repository.Release.GetAll(GitHubUser, GitHubRepository).Result;
     var releaseId = releases.Single(r => r.TagName == GitHubBuildTag).Id;
 
     Information("Loading CI release...");
-    var release = client.Release.Get(GitHubUser, GitHubRepository, releaseId).Result;
+    var release = client.Repository.Release.Get(GitHubUser, GitHubRepository, releaseId).Result;
 
     Information("Loading asset...");
     var asset = release.Assets.SingleOrDefault(a => a.Name == TemporaryArtifactsFilename);
     
     if (asset != null) {
         Information("Deleting asset...");
-        client.Release.DeleteAsset(GitHubUser, GitHubRepository, asset.Id).Wait();
+        client.Repository.Release.DeleteAsset(GitHubUser, GitHubRepository, asset.Id).Wait();
     } else {
         Information("Asset not found.");
     }
@@ -393,7 +396,7 @@ Task("UploadArtifacts")
         };
         
         Information("Uploading asset...");
-        asset = client.Release.UploadAsset(release, assetUpload).Result;
+        asset = client.Repository.Release.UploadAsset(release, assetUpload).Result;
         Information("Uploaded asset: {0}", asset.Id);
         Information("Url: {0}", asset.BrowserDownloadUrl);
     }

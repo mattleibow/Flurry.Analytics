@@ -146,12 +146,12 @@
       <HintPath>..\..\packages\MvvmCross.HotTuna.Touch.Dialog.3.5.1\lib\Xamarin.iOS10\CrossUI.Touch.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Flurry.Analytics.iOS, Version=6.3.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Flurry.Analytics.1.2.0\lib\Xamarin.iOS10\Flurry.Analytics.iOS.dll</HintPath>
+    <Reference Include="Flurry.Analytics.iOS">
+      <HintPath>..\..\packages\Flurry.Analytics.2.0.0\lib\Xamarin.iOS10\Flurry.Analytics.iOS.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Flurry.Analytics.Portable, Version=1.2.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Flurry.Analytics.Portable.1.2.0\lib\XamariniOS10\Flurry.Analytics.Portable.dll</HintPath>
+    <Reference Include="Flurry.Analytics.Portable">
+      <HintPath>..\..\packages\Flurry.Analytics.Portable.2.0.0\lib\XamariniOS10\Flurry.Analytics.Portable.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />
