@@ -74,7 +74,7 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="Flurry.Analytics.Android">
-      <HintPath>..\..\packages\Flurry.Analytics.2.0.0\lib\MonoAndroid23\Flurry.Analytics.Android.dll</HintPath>
+      <HintPath>..\..\packages\Flurry.Analytics.2.0.0\lib\MonoAndroid10\Flurry.Analytics.Android.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Flurry.Analytics.Portable">
@@ -111,7 +111,7 @@
     <AndroidResource Include="Resources\Values\MvxBindingAttributes.xml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Properties\AndroidManifest.xml" />
+    <None Include="Properties\AndroidManifest.xml" />
     <AndroidResource Include="Resources\Values\SplashStyle.xml" />
     <AndroidResource Include="Resources\Drawable\splash.png" />
   </ItemGroup>
